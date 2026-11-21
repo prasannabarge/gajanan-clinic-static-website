@@ -1,0 +1,2680 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gajanan Clinic — Dr. Nandkishor Arun Shinde | Homeopathic Care in Satara</title>
+  <meta name="description" content="Gajanan Clinic in Satara, Maharashtra, led by Dr. Nandkishor Arun Shinde. Gentle, individualized constitutional homeopathic care for all generations." />
+
+  <!-- Google Fonts: Editorial Serif + Modern Geometric Sans + Crisp Devanagari for Marathi -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN for responsive grid & utility precision -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emeraldDeep: '#0A362F',
+            forestTeal: '#0F4C43',
+            porcelain: '#FAF9F5',
+            linen: '#F2EFE9',
+            sageTint: '#E5EFEA',
+            champagne: '#C49A5C',
+            charcoalInk: '#14201E',
+            mutedSlate: '#4B5E5A'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', '"Noto Sans Devanagari"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* =========================================================================
+       DESIGN TOKENS — QUIET LUXURY CLINICAL BOTANICAL
+       ========================================================================= */
+    :root {
+      --color-emerald: #0A362F;
+      --color-forest: #0F4C43;
+      --color-porcelain: #FAF9F5;
+      --color-linen: #F2EFE9;
+      --color-sage: #E5EFEA;
+      --color-gold: #C49A5C;
+      --color-gold-soft: rgba(196, 154, 92, 0.22);
+      --color-ink: #14201E;
+      --color-slate: #4B5E5A;
+      --color-border: rgba(10, 54, 47, 0.11);
+      --color-border-strong: rgba(10, 54, 47, 0.2);
+
+      --font-display: 'Cormorant Garamond', 'Noto Sans Devanagari', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+      --radius-card: 1.5rem;
+      --radius-pill: 9999px;
+      --shadow-soft: 0 14px 40px -12px rgba(10, 54, 47, 0.08);
+      --shadow-elevated: 0 24px 60px -18px rgba(10, 54, 47, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--color-porcelain);
+      color: var(--color-ink);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background-color: var(--color-porcelain);
+      color: var(--color-ink);
+    }
+
+    /* Marathi typography refinement for balanced line-height */
+    html[lang="mr"] body {
+      line-height: 1.7;
+    }
+
+    html[lang="mr"] .font-editorial {
+      font-family: 'Noto Sans Devanagari', 'Cormorant Garamond', serif;
+      letter-spacing: -0.01em;
+    }
+
+    /* Accessible Focus Ring */
+    :focus-visible {
+      outline: 2px solid var(--color-gold);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    /* Fluid Editorial Typography */
+    .font-editorial {
+      font-family: var(--font-display);
+    }
+
+    .hero-headline {
+      font-size: clamp(2.55rem, 5.4vw, 4.75rem);
+      line-height: 1.04;
+      letter-spacing: -0.02em;
+    }
+
+    html[lang="mr"] .hero-headline {
+      font-size: clamp(2.1rem, 4.2vw, 3.65rem);
+      line-height: 1.2;
+    }
+
+    .section-headline {
+      font-size: clamp(2rem, 3.8vw, 3.25rem);
+      line-height: 1.1;
+      letter-spacing: -0.018em;
+    }
+
+    html[lang="mr"] .section-headline {
+      font-size: clamp(1.75rem, 3.2vw, 2.7rem);
+      line-height: 1.28;
+    }
+
+    /* =========================================================================
+       AMBIENT MESH BACKGROUND (HERO)
+       ========================================================================= */
+    .hero-ambient {
+      position: relative;
+      background-color: var(--color-porcelain);
+      isolation: isolate;
+    }
+
+    .hero-ambient::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(229, 239, 234, 0.95) 0%, transparent 48%),
+        radial-gradient(circle at 86% 22%, rgba(196, 154, 92, 0.16) 0%, transparent 44%),
+        radial-gradient(circle at 65% 84%, rgba(15, 76, 67, 0.08) 0%, transparent 48%);
+      animation: ambientBreath 16s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes ambientBreath {
+      0% { transform: scale(1) translate3d(0, 0, 0); opacity: 0.9; }
+      50% { transform: scale(1.04) translate3d(-1.2%, 1%, 0); opacity: 1; }
+      100% { transform: scale(1.01) translate3d(1%, -1%, 0); opacity: 0.92; }
+    }
+
+    /* Subtle paper grain overlay */
+    .subtle-grain {
+      background-image: radial-gradient(rgba(10, 54, 47, 0.035) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+
+    /* =========================================================================
+       GLASSMORPHIC NAVBAR
+       ========================================================================= */
+    .glass-nav {
+      background: rgba(250, 249, 245, 0.74);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(10, 54, 47, 0.06);
+      transition: background 0.35s var(--ease-luxury), box-shadow 0.35s var(--ease-luxury), border-color 0.35s var(--ease-luxury), padding 0.35s var(--ease-luxury);
+    }
+
+    .glass-nav.scrolled {
+      background: rgba(250, 249, 245, 0.92);
+      border-bottom-color: rgba(10, 54, 47, 0.12);
+      box-shadow: 0 10px 30px -15px rgba(10, 54, 47, 0.12);
+    }
+
+    /* Glassmorphic Card */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 22px 50px -20px rgba(10, 54, 47, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    }
+
+    /* =========================================================================
+       BENTO GRID MOUSE-TRACKING RADIAL SPOTLIGHT
+       ========================================================================= */
+    .bento-card {
+      position: relative;
+      border-radius: var(--radius-card);
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      transition: transform 0.45s var(--ease-luxury), box-shadow 0.45s var(--ease-luxury), border-color 0.45s var(--ease-luxury);
+      --x: 50%;
+      --y: 50%;
+    }
+
+    /* Surface radial glow */
+    .bento-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(520px circle at var(--x) var(--y), rgba(196, 154, 92, 0.15), rgba(15, 76, 67, 0.05) 38%, transparent 65%);
+      opacity: 0;
+      transition: opacity 0.4s var(--ease-luxury);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Border spotlight sheen */
+    .bento-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.5px;
+      background: radial-gradient(360px circle at var(--x) var(--y), rgba(196, 154, 92, 0.85), rgba(15, 76, 67, 0.25) 45%, transparent 72%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.4s var(--ease-luxury);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .bento-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-elevated);
+    }
+
+    .bento-card:hover::before,
+    .bento-card:hover::after {
+      opacity: 1;
+    }
+
+    .bento-card-dark {
+      background: linear-gradient(145deg, var(--color-emerald) 0%, var(--color-forest) 100%);
+      border-color: rgba(196, 154, 92, 0.25);
+      color: var(--color-porcelain);
+    }
+
+    .bento-card-dark::before {
+      background: radial-gradient(480px circle at var(--x) var(--y), rgba(196, 154, 92, 0.24), transparent 65%);
+    }
+
+    /* =========================================================================
+       INTERACTIVE SPECIALTY CARDS & FILTER PILLS
+       ========================================================================= */
+    .filter-pill {
+      position: relative;
+      transition: color 0.3s var(--ease-luxury), background-color 0.3s var(--ease-luxury), border-color 0.3s var(--ease-luxury), transform 0.25s var(--ease-luxury);
+    }
+
+    .filter-pill.active {
+      background-color: var(--color-emerald);
+      color: var(--color-porcelain);
+      border-color: var(--color-emerald);
+      box-shadow: 0 8px 20px -6px rgba(10, 54, 47, 0.35);
+    }
+
+    .specialty-card {
+      transition: transform 0.45s var(--ease-luxury), box-shadow 0.45s var(--ease-luxury), opacity 0.35s var(--ease-luxury), border-color 0.35s var(--ease-luxury);
+    }
+
+    .specialty-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(196, 154, 92, 0.55);
+      box-shadow: var(--shadow-elevated);
+    }
+
+    .specialty-card.is-hidden {
+      display: none;
+    }
+
+    .specialty-card.is-entering {
+      animation: cardFadeIn 0.45s var(--ease-luxury) forwards;
+    }
+
+    @keyframes cardFadeIn {
+      from { opacity: 0; transform: translateY(14px) scale(0.985); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* =========================================================================
+       PURE CSS GRID FAQ ACCORDION (0fr -> 1fr)
+       ========================================================================= */
+    .accordion-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.42s var(--ease-luxury), opacity 0.35s var(--ease-luxury);
+      opacity: 0;
+    }
+
+    .accordion-item[data-open="true"] .accordion-content {
+      grid-template-rows: 1fr;
+      opacity: 1;
+    }
+
+    .accordion-inner {
+      overflow: hidden;
+    }
+
+    .accordion-icon {
+      transition: transform 0.4s var(--ease-luxury), background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .accordion-item[data-open="true"] .accordion-icon {
+      transform: rotate(45deg);
+      background-color: var(--color-emerald);
+      color: var(--color-porcelain);
+    }
+
+    /* =========================================================================
+       SLIDE-OVER DRAWER & MOBILE MENU ANIMATIONS
+       ========================================================================= */
+    .drawer-backdrop {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s var(--ease-luxury);
+    }
+
+    .drawer-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .drawer-panel {
+      transform: translateX(100%);
+      transition: transform 0.45s var(--ease-luxury);
+    }
+
+    .drawer-backdrop.open .drawer-panel {
+      transform: translateX(0);
+    }
+
+    /* =========================================================================
+       SCROLL REVEAL ANIMATIONS
+       ========================================================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s var(--ease-luxury), transform 0.75s var(--ease-luxury);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 80ms; }
+    .reveal-delay-2 { transition-delay: 160ms; }
+    .reveal-delay-3 { transition-delay: 240ms; }
+    .reveal-delay-4 { transition-delay: 320ms; }
+
+    /* =========================================================================
+       SLOT PILLS & FORM CONTROLS
+       ========================================================================= */
+    .slot-pill {
+      transition: all 0.25s var(--ease-luxury);
+    }
+
+    .slot-pill.selected {
+      background-color: var(--color-emerald);
+      color: #FAF9F5;
+      border-color: var(--color-emerald);
+      box-shadow: 0 8px 18px -6px rgba(10, 54, 47, 0.38);
+    }
+
+    .visit-tab.selected {
+      background-color: #FFFFFF;
+      color: var(--color-emerald);
+      box-shadow: 0 4px 12px -2px rgba(10, 54, 47, 0.12);
+    }
+
+    /* Status pulse */
+    .status-pulse {
+      position: relative;
+    }
+    .status-pulse::after {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border-radius: 9999px;
+      border: 2px solid currentColor;
+      opacity: 0.55;
+      animation: statusRipple 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+    @keyframes statusRipple {
+      0% { transform: scale(0.8); opacity: 0.7; }
+      100% { transform: scale(1.9); opacity: 0; }
+    }
+
+    /* Toast Notification */
+    .toast-bar {
+      transform: translateY(120%);
+      opacity: 0;
+      transition: transform 0.4s var(--ease-luxury), opacity 0.35s ease;
+    }
+    .toast-bar.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Doctor Studio Placeholder Frame */
+    .portrait-frame {
+      background:
+        radial-gradient(circle at 50% 28%, rgba(229, 239, 234, 0.9) 0%, rgba(242, 239, 233, 0.95) 68%),
+        linear-gradient(160deg, #F6F4EE 0%, #E7EFEA 100%);
+    }
+
+    /* =========================================================================
+       REDUCED MOTION SUPPORT
+       ========================================================================= */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body class="bg-porcelain text-charcoalInk antialiased selection:bg-emeraldDeep selection:text-porcelain">
+
+  <!-- Skip to Main Content for Keyboard Accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-emeraldDeep focus:text-porcelain focus:rounded-full focus:text-sm focus:font-medium">
+    Skip to main content
+  </a>
+
+  <!-- =========================================================================
+       1. GLASSMORPHIC FLOATING NAVBAR
+       ========================================================================= -->
+  <header id="site-header" class="glass-nav fixed top-0 inset-x-0 z-50 py-3.5 md:py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+
+      <!-- Brand Logo: Geometric Botanical Lotus + Clinical Cross -->
+      <a href="#top" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-11 h-11 rounded-2xl bg-emeraldDeep text-porcelain flex items-center justify-center shadow-md group-hover:bg-forestTeal transition-colors duration-300 relative overflow-hidden">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <!-- Outer Botanical Lotus Petals -->
+            <path d="M20 5C23.5 10.5 25 15.2 20 21C15 15.2 16.5 10.5 20 5Z" stroke="#C49A5C" stroke-width="1.5" stroke-linejoin="round" />
+            <path d="M20 21C25.5 16.5 31 16 34 21C30 25.5 24.5 25 20 21Z" stroke="#E5EFEA" stroke-width="1.35" stroke-linejoin="round" />
+            <path d="M20 21C14.5 16.5 9 16 6 21C10 25.5 15.5 25 20 21Z" stroke="#E5EFEA" stroke-width="1.35" stroke-linejoin="round" />
+            <!-- Refined Clinical Cross Core -->
+            <path d="M20 23.5V34.5M14.5 29H25.5" stroke="#C49A5C" stroke-width="1.8" stroke-linecap="round" />
+            <circle cx="20" cy="21" r="2" fill="#FAF9F5" />
+          </svg>
+        </div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-editorial text-xl sm:text-2xl font-semibold tracking-tight text-emeraldDeep" data-i18n="brand.name">Gajanan Clinic</span>
+          <span class="text-[11px] uppercase tracking-[0.18em] text-mutedSlate font-medium" data-i18n="brand.subtitle">Satara • Homeopathy</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation" class="hidden lg:flex items-center gap-7 text-sm font-medium text-charcoalInk/85">
+        <a href="#specialties" class="hover:text-emeraldDeep transition-colors py-1" data-i18n="nav.specialties">Specialties</a>
+        <a href="#care-process" class="hover:text-emeraldDeep transition-colors py-1" data-i18n="nav.process">Care Process</a>
+        <a href="#doctor" class="hover:text-emeraldDeep transition-colors py-1" data-i18n="nav.doctor">Dr. Shinde</a>
+        <a href="#faq" class="hover:text-emeraldDeep transition-colors py-1" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" class="hover:text-emeraldDeep transition-colors py-1" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <!-- Right Controls: Language Switcher + CTA + Mobile Hamburger -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <!-- English / Marathi Live Language Toggle -->
+        <div role="group" aria-label="Language Switcher" class="inline-flex items-center rounded-full bg-linen p-1 border border-emeraldDeep/10 text-xs font-semibold">
+          <button type="button" id="lang-en" class="lang-btn px-2.5 sm:px-3 py-1.5 rounded-full transition-all duration-300 bg-emeraldDeep text-porcelain shadow-sm" aria-pressed="true">
+            EN
+          </button>
+          <button type="button" id="lang-mr" class="lang-btn px-2.5 sm:px-3 py-1.5 rounded-full transition-all duration-300 text-mutedSlate hover:text-emeraldDeep" aria-pressed="false">
+            मराठी
+          </button>
+        </div>
+
+        <!-- Primary Nav CTA (Desktop/Tablet) -->
+        <a href="#booking" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emeraldDeep text-porcelain text-sm font-medium hover:bg-forestTeal shadow-md hover:shadow-lg transition-all duration-300">
+          <span data-i18n="nav.cta">Book Consultation</span>
+          <svg class="w-4 h-4 text-champagne" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M4.5 10h11m0 0-4-4m4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button type="button" id="mobile-menu-btn" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full bg-linen border border-emeraldDeep/10 text-emeraldDeep hover:bg-sageTint transition-colors" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h11" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-drawer" class="drawer-backdrop fixed inset-0 z-[70] bg-charcoalInk/45 backdrop-blur-sm lg:hidden" aria-hidden="true">
+    <div class="drawer-panel ml-auto w-[84%] max-w-sm h-full bg-porcelain shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-emeraldDeep/10">
+          <div>
+            <p class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="brand.name">Gajanan Clinic</p>
+            <p class="text-xs uppercase tracking-[0.16em] text-mutedSlate" data-i18n="brand.subtitle">Satara • Homeopathy</p>
+          </div>
+          <button type="button" id="mobile-drawer-close" class="w-10 h-10 rounded-full bg-linen flex items-center justify-center text-emeraldDeep hover:bg-sageTint transition-colors" aria-label="Close navigation menu">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="mt-6 flex flex-col gap-2" aria-label="Mobile Navigation">
+          <a href="#difference" class="mobile-nav-link px-4 py-3.5 rounded-2xl text-base font-medium text-charcoalInk hover:bg-sageTint/70 transition-colors" data-i18n="nav.difference">Why Gajanan Clinic</a>
+          <a href="#specialties" class="mobile-nav-link px-4 py-3.5 rounded-2xl text-base font-medium text-charcoalInk hover:bg-sageTint/70 transition-colors" data-i18n="nav.specialties">Specialties</a>
+          <a href="#care-process" class="mobile-nav-link px-4 py-3.5 rounded-2xl text-base font-medium text-charcoalInk hover:bg-sageTint/70 transition-colors" data-i18n="nav.process">Care Process</a>
+          <a href="#doctor" class="mobile-nav-link px-4 py-3.5 rounded-2xl text-base font-medium text-charcoalInk hover:bg-sageTint/70 transition-colors" data-i18n="nav.doctor">Dr. Shinde</a>
+          <a href="#faq" class="mobile-nav-link px-4 py-3.5 rounded-2xl text-base font-medium text-charcoalInk hover:bg-sageTint/70 transition-colors" data-i18n="nav.faq">FAQ</a>
+          <a href="#contact" class="mobile-nav-link px-4 py-3.5 rounded-2xl text-base font-medium text-charcoalInk hover:bg-sageTint/70 transition-colors" data-i18n="nav.contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-emeraldDeep/10 space-y-3">
+        <a href="#booking" class="mobile-nav-link w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-emeraldDeep text-porcelain font-medium shadow-md">
+          <span data-i18n="nav.cta">Book Consultation</span>
+          <svg class="w-4 h-4 text-champagne" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4.5 10h11m0 0-4-4m4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <p class="text-center text-xs text-mutedSlate" data-i18n="hero.badge">Satara, Maharashtra • Homeopathic Care</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MAIN CONTENT
+       ========================================================================= -->
+  <main id="main-content">
+
+    <!-- =======================================================================
+         2. EDITORIAL HERO SECTION
+         ======================================================================= -->
+    <section id="top" class="hero-ambient pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 relative overflow-hidden">
+      <!-- Botanical Watermark SVG (pure decorative vector) -->
+      <svg class="pointer-events-none select-none absolute -right-24 top-20 w-[440px] h-[440px] text-emeraldDeep/[0.035] hidden md:block" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+        <circle cx="200" cy="200" r="175" stroke="currentColor" stroke-width="1" stroke-dasharray="4 6" />
+        <path d="M200 35C238 100 245 155 200 215C155 155 162 100 200 35Z" stroke="currentColor" stroke-width="1.5" />
+        <path d="M200 215C268 175 322 182 365 215C315 260 258 258 200 215Z" stroke="currentColor" stroke-width="1.5" />
+        <path d="M200 215C132 175 78 182 35 215C85 260 142 258 200 215Z" stroke="currentColor" stroke-width="1.5" />
+        <path d="M200 215V365" stroke="currentColor" stroke-width="1.5" />
+      </svg>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          <!-- Left Editorial Column -->
+          <div class="lg:col-span-7 space-y-6 sm:space-y-7">
+            <!-- Location Pill Badge -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-sageTint/90 border border-emeraldDeep/10 text-emeraldDeep text-xs sm:text-sm font-medium tracking-wide">
+              <span class="w-2 h-2 rounded-full bg-champagne"></span>
+              <span data-i18n="hero.badge">Satara, Maharashtra • Homeopathic Care</span>
+            </div>
+
+            <!-- Striking Serif Headline -->
+            <h1 class="hero-headline font-editorial font-medium text-emeraldDeep">
+              <span data-i18n="hero.titleLine1">Thoughtful Homeopathy,</span>
+              <span class="block italic font-normal text-forestTeal" data-i18n="hero.titleLine2">Rooted in Calm Clinical Care.</span>
+            </h1>
+
+            <!-- Clear Value Proposition -->
+            <p class="text-base sm:text-lg text-mutedSlate max-w-2xl leading-relaxed" data-i18n="hero.subtitle">
+              Led by <strong class="font-semibold text-charcoalInk">Dr. Nandkishor Arun Shinde</strong>, Gajanan Clinic offers gentle, individualized constitutional homeopathy designed to address chronic and everyday concerns at their root—with unhurried attention for every member of your family.
+            </p>
+
+            <!-- Hero CTAs -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+              <a href="#booking" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-emeraldDeep text-porcelain font-medium text-sm sm:text-base shadow-lg hover:bg-forestTeal hover:-translate-y-0.5 transition-all duration-300">
+                <span data-i18n="hero.primaryCta">Book Appointment</span>
+                <svg class="w-4 h-4 text-champagne" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.9">
+                  <path d="M4.5 10h11m0 0-4-4m4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a href="#specialties" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-white/80 text-emeraldDeep border border-emeraldDeep/15 font-medium text-sm sm:text-base hover:bg-sageTint/60 hover:border-emeraldDeep/30 transition-all duration-300">
+                <span data-i18n="hero.secondaryCta">Explore Treatments</span>
+              </a>
+            </div>
+
+            <!-- Qualitative Trust Strip (Authentic, Zero Fabricated Stats) -->
+            <div class="pt-4 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-xs sm:text-sm text-mutedSlate border-t border-emeraldDeep/10">
+              <span class="inline-flex items-center gap-2">
+                <svg class="w-4 h-4 text-champagne shrink-0" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4.5 10.5l3.5 3.5 7.5-8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span data-i18n="hero.trust1">Constitutional Case-Taking</span>
+              </span>
+              <span class="inline-flex items-center gap-2">
+                <svg class="w-4 h-4 text-champagne shrink-0" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4.5 10.5l3.5 3.5 7.5-8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span data-i18n="hero.trust2">Gentle & Non-Habit-Forming</span>
+              </span>
+              <span class="inline-flex items-center gap-2">
+                <svg class="w-4 h-4 text-champagne shrink-0" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4.5 10.5l3.5 3.5 7.5-8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span data-i18n="hero.trust3">All Ages Welcome</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Right Column: Floating Glassmorphic Quick Clinic Info Card -->
+          <div class="lg:col-span-5">
+            <div class="glass-card rounded-[1.75rem] p-6 sm:p-8 relative overflow-hidden">
+              <!-- Subtle Top Champagne Accent Rule -->
+              <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-emeraldDeep via-champagne to-forestTeal"></div>
+
+              <!-- Header + Live Open/Closed Indicator -->
+              <div class="flex items-start justify-between gap-4 pb-5 border-b border-emeraldDeep/10">
+                <div>
+                  <p class="text-[11px] uppercase tracking-[0.2em] text-champagne font-semibold" data-i18n="infoCard.eyebrow">Clinic Desk • Satara</p>
+                  <h2 class="font-editorial text-2xl sm:text-[1.7rem] font-semibold text-emeraldDeep mt-0.5" data-i18n="infoCard.title">Dr. Nandkishor Arun Shinde</h2>
+                  <p class="text-xs sm:text-sm text-mutedSlate" data-i18n="infoCard.role">Homeopathic Practitioner</p>
+                </div>
+
+                <!-- Dynamic Live Status Pill -->
+                <div id="live-status-pill" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold shrink-0 bg-sageTint text-emeraldDeep border border-emeraldDeep/10">
+                  <span id="live-status-dot" class="status-pulse w-2 h-2 rounded-full bg-emerald-600 text-emerald-500"></span>
+                  <span id="live-status-text">Checking...</span>
+                </div>
+              </div>
+
+              <!-- Clinic Hours (Clearly marked as Editable Demo Hours) -->
+              <div class="py-5 space-y-3 border-b border-emeraldDeep/10">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-semibold uppercase tracking-[0.14em] text-charcoalInk/75" data-i18n="infoCard.hoursLabel">Consultation Hours</span>
+                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-linen text-mutedSlate font-medium" data-i18n="infoCard.editableTag">Editable Demo Hours</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <div class="rounded-2xl bg-porcelain/90 border border-emeraldDeep/8 p-3.5">
+                    <div class="flex items-center gap-2 text-xs font-medium text-mutedSlate">
+                      <svg class="w-4 h-4 text-champagne" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                        <circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41" stroke-linecap="round" />
+                      </svg>
+                      <span data-i18n="infoCard.morning">Morning Session</span>
+                    </div>
+                    <p class="mt-1 text-sm font-semibold text-emeraldDeep">10:00 AM – 1:30 PM</p>
+                    <p class="text-[11px] text-mutedSlate" data-i18n="infoCard.monSat">Mon – Sat</p>
+                  </div>
+
+                  <div class="rounded-2xl bg-porcelain/90 border border-emeraldDeep/8 p-3.5">
+                    <div class="flex items-center gap-2 text-xs font-medium text-mutedSlate">
+                      <svg class="w-4 h-4 text-champagne" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span data-i18n="infoCard.evening">Evening Session</span>
+                    </div>
+                    <p class="mt-1 text-sm font-semibold text-emeraldDeep">5:30 PM – 8:30 PM</p>
+                    <p class="text-[11px] text-mutedSlate" data-i18n="infoCard.sunNote">Sun: Prior Appointment</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Consultation Mode Badges & Quick Action -->
+              <div class="pt-5 space-y-4">
+                <div class="flex flex-wrap gap-2">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sageTint/80 text-emeraldDeep text-xs font-medium">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" /><circle cx="12" cy="10" r="2.5" />
+                    </svg>
+                    <span data-i18n="infoCard.mode1">In-Clinic • Satara</span>
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-linen text-charcoalInk text-xs font-medium">
+                    <svg class="w-3.5 h-3.5 text-champagne" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z" stroke-linecap="round" />
+                    </svg>
+                    <span data-i18n="infoCard.mode2">Prior Slot Preferred</span>
+                  </span>
+                </div>
+
+                <a href="#booking" class="w-full inline-flex items-center justify-between px-5 py-3.5 rounded-2xl bg-emeraldDeep text-porcelain text-sm font-medium hover:bg-forestTeal transition-colors group">
+                  <span data-i18n="infoCard.quickBook">Reserve Morning or Evening Slot</span>
+                  <span class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                    <svg class="w-4 h-4 text-champagne" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.9">
+                      <path d="M4.5 10h11m0 0-4-4m4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. MODERN ASYMMETRIC BENTO GRID ("THE GAJANAN CLINIC DIFFERENCE")
+         ======================================================================= -->
+    <section id="difference" class="py-16 sm:py-24 bg-linen/60 border-y border-emeraldDeep/[0.07]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-12 sm:mb-14 reveal">
+          <p class="text-xs uppercase tracking-[0.22em] text-champagne font-semibold mb-3" data-i18n="bento.eyebrow">Clinical Philosophy</p>
+          <h2 class="section-headline font-editorial font-medium text-emeraldDeep" data-i18n="bento.title">The Gajanan Clinic Difference</h2>
+          <p class="mt-3 text-base text-mutedSlate leading-relaxed" data-i18n="bento.subtitle">
+            Designed around stillness, attentive listening, and classical homeopathic rigor—so every consultation feels calm, structured, and deeply personal.
+          </p>
+        </div>
+
+        <!-- Asymmetric 12-Column Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6" id="bento-grid">
+
+          <!-- Bento 1 (Large Dark Emerald Feature — 7 cols) -->
+          <article class="bento-card bento-card-dark md:col-span-7 p-7 sm:p-9 flex flex-col justify-between min-h-[270px] reveal">
+            <div class="relative z-10 flex items-start justify-between gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-white/10 border border-champagne/30 flex items-center justify-center text-champagne">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <path d="M12 3c4 4.5 6 8.2 6 11a6 6 0 1 1-12 0c0-2.8 2-6.5 6-11z" stroke-linejoin="round" />
+                  <path d="M12 10v8m-3-4c1.5 0 3 1 3 2.5m3-4.5c-1.5 0-3 1-3 2.5" stroke-linecap="round" />
+                </svg>
+              </div>
+              <span class="text-[11px] uppercase tracking-[0.18em] px-3 py-1 rounded-full bg-white/10 text-champagne font-semibold" data-i18n="bento.tag1">Core Principle</span>
+            </div>
+            <div class="relative z-10 mt-8">
+              <h3 class="font-editorial text-2xl sm:text-3xl font-medium text-porcelain" data-i18n="bento.c1Title">Root-Cause Constitutional Homeopathy</h3>
+              <p class="mt-3 text-sm sm:text-base text-porcelain/80 leading-relaxed max-w-xl" data-i18n="bento.c1Desc">
+                Rather than masking recurring symptoms temporarily, constitutional prescribing studies your physical constitution, triggers, sleep, and emotional rhythm to stimulate gentle, lasting internal balance—without harsh side effects or dependency.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bento 2 (5 cols) -->
+          <article class="bento-card md:col-span-5 p-7 sm:p-8 flex flex-col justify-between min-h-[270px] reveal reveal-delay-1">
+            <div class="relative z-10 w-12 h-12 rounded-2xl bg-sageTint text-emeraldDeep flex items-center justify-center">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="relative z-10 mt-8">
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="bento.c2Title">Dedicated In-Depth Case Taking</h3>
+              <p class="mt-2.5 text-sm sm:text-[15px] text-mutedSlate leading-relaxed" data-i18n="bento.c2Desc">
+                Unhurried, private consultations where your complete health narrative, lifestyle patterns, and past reports are evaluated carefully before crafting a tailored remedy plan.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bento 3 (4 cols) -->
+          <article class="bento-card md:col-span-4 p-7 flex flex-col justify-between reveal reveal-delay-1">
+            <div class="relative z-10 w-11 h-11 rounded-2xl bg-linen text-emeraldDeep flex items-center justify-center border border-emeraldDeep/10">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" stroke-linecap="round" />
+                <circle cx="10" cy="7" r="4" />
+                <path d="M21 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="relative z-10 mt-6">
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="bento.c3Title">Safe for Every Generation</h3>
+              <p class="mt-2 text-sm text-mutedSlate leading-relaxed" data-i18n="bento.c3Desc">
+                Gentle, palatable remedies thoughtfully selected for infants, school-age children, working adults, and senior family members.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bento 4 (4 cols) -->
+          <article class="bento-card md:col-span-4 p-7 flex flex-col justify-between reveal reveal-delay-2">
+            <div class="relative z-10 w-11 h-11 rounded-2xl bg-linen text-emeraldDeep flex items-center justify-center border border-emeraldDeep/10">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="relative z-10 mt-6">
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="bento.c4Title">Modern Patient Experience</h3>
+              <p class="mt-2 text-sm text-mutedSlate leading-relaxed" data-i18n="bento.c4Desc">
+                Minimal waiting through structured slot scheduling, clear dosage guidance, and effortless WhatsApp appointment coordination.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bento 5 (4 cols) -->
+          <article class="bento-card md:col-span-4 p-7 flex flex-col justify-between bg-sageTint/45 reveal reveal-delay-3">
+            <div class="relative z-10 w-11 h-11 rounded-2xl bg-white text-emeraldDeep flex items-center justify-center border border-emeraldDeep/10">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />
+                <circle cx="12" cy="10" r="2.5" />
+              </svg>
+            </div>
+            <div class="relative z-10 mt-6">
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="bento.c5Title">Accessible Care in Satara</h3>
+              <p class="mt-2 text-sm text-mutedSlate leading-relaxed" data-i18n="bento.c5Desc">
+                A serene, hygienic clinical environment right in Satara, Maharashtra—offering dependable continuity of care close to home.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. INTERACTIVE SPECIALTIES & TREATMENTS EXPLORER
+         ======================================================================= -->
+    <section id="specialties" class="py-16 sm:py-24 bg-porcelain">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Header + Category Filters -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-12 reveal">
+          <div class="max-w-2xl">
+            <p class="text-xs uppercase tracking-[0.22em] text-champagne font-semibold mb-3" data-i18n="spec.eyebrow">Areas of Care</p>
+            <h2 class="section-headline font-editorial font-medium text-emeraldDeep" data-i18n="spec.title">Specialties & Homeopathic Focus</h2>
+            <p class="mt-3 text-base text-mutedSlate" data-i18n="spec.subtitle">
+              Select a wellness category to explore conditions addressed and inspect our constitutional clinical approach.
+            </p>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="flex flex-wrap gap-2.5 mb-10 reveal" role="tablist" aria-label="Filter treatments by category" id="specialty-filters">
+          <button type="button" role="tab" aria-selected="true" data-filter="all" class="filter-pill active px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-emeraldDeep/15 bg-white text-charcoalInk hover:border-emeraldDeep/40" data-i18n="spec.fAll">All</button>
+          <button type="button" role="tab" aria-selected="false" data-filter="skin" class="filter-pill px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-emeraldDeep/15 bg-white text-charcoalInk hover:border-emeraldDeep/40" data-i18n="spec.fSkin">Skin & Hair</button>
+          <button type="button" role="tab" aria-selected="false" data-filter="respiratory" class="filter-pill px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-emeraldDeep/15 bg-white text-charcoalInk hover:border-emeraldDeep/40" data-i18n="spec.fResp">Respiratory & Allergies</button>
+          <button type="button" role="tab" aria-selected="false" data-filter="digestive" class="filter-pill px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-emeraldDeep/15 bg-white text-charcoalInk hover:border-emeraldDeep/40" data-i18n="spec.fDig">Digestive & Immunity</button>
+          <button type="button" role="tab" aria-selected="false" data-filter="joints" class="filter-pill px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-emeraldDeep/15 bg-white text-charcoalInk hover:border-emeraldDeep/40" data-i18n="spec.fJoint">Joint & Lifestyle</button>
+          <button type="button" role="tab" aria-selected="false" data-filter="family" class="filter-pill px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-emeraldDeep/15 bg-white text-charcoalInk hover:border-emeraldDeep/40" data-i18n="spec.fFamily">Child & Women's Wellness</button>
+        </div>
+
+        <!-- 6 Detailed Treatment Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="specialty-grid">
+
+          <!-- Card 1: Skin & Hair -->
+          <article class="specialty-card bg-white rounded-3xl p-7 border border-emeraldDeep/10 flex flex-col justify-between shadow-sm reveal" data-category="skin">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-sageTint text-emeraldDeep flex items-center justify-center">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65">
+                    <path d="M12 3c2.5 3.5 5 6.8 5 10.5a5 5 0 0 1-10 0C7 9.8 9.5 6.5 12 3z" stroke-linejoin="round" />
+                    <path d="M9.5 14.5c.7 1 1.6 1.5 2.5 1.5" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <span class="text-[11px] uppercase tracking-[0.16em] text-champagne font-semibold" data-i18n="spec.catSkin">Dermatology</span>
+              </div>
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="spec.c1Title">Skin & Hair Care</h3>
+              <p class="mt-2.5 text-sm text-mutedSlate leading-relaxed" data-i18n="spec.c1Desc">
+                Internal constitutional support for chronic skin sensitivity, recurring flare-ups, and hair thinning without topical steroid dependence.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Eczema & Psoriasis</span>
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Acne & Urticaria</span>
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Hair Fall & Dandruff</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-5 border-t border-emeraldDeep/10">
+              <button type="button" class="open-approach-btn w-full inline-flex items-center justify-between text-sm font-semibold text-emeraldDeep hover:text-forestTeal group" data-treatment-id="skin">
+                <span data-i18n="spec.viewApproach">View Approach</span>
+                <span class="w-8 h-8 rounded-full bg-linen group-hover:bg-emeraldDeep group-hover:text-porcelain flex items-center justify-center transition-colors">
+                  <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M5 10h10m0 0-3.5-3.5M15 10l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2: Respiratory & Allergies -->
+          <article class="specialty-card bg-white rounded-3xl p-7 border border-emeraldDeep/10 flex flex-col justify-between shadow-sm reveal reveal-delay-1" data-category="respiratory">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-sageTint text-emeraldDeep flex items-center justify-center">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65">
+                    <path d="M12 4v9m0 0c-2-2-6-2-7 1.5S6 20 8.5 20c2 0 3.5-1.5 3.5-3.5m0-3.5c2-2 6-2 7 1.5S18 20 15.5 20c-2 0-3.5-1.5-3.5-3.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <span class="text-[11px] uppercase tracking-[0.16em] text-champagne font-semibold" data-i18n="spec.catResp">Airway Balance</span>
+              </div>
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="spec.c2Title">Respiratory & Allergies</h3>
+              <p class="mt-2.5 text-sm text-mutedSlate leading-relaxed" data-i18n="spec.c2Desc">
+                Calming airway hyper-reactivity and seasonal sensitivity so you breathe more comfortably across weather shifts.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Allergic Rhinitis</span>
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Sinusitis</span>
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Recurring Cough & Asthma</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-5 border-t border-emeraldDeep/10">
+              <button type="button" class="open-approach-btn w-full inline-flex items-center justify-between text-sm font-semibold text-emeraldDeep hover:text-forestTeal group" data-treatment-id="respiratory">
+                <span data-i18n="spec.viewApproach">View Approach</span>
+                <span class="w-8 h-8 rounded-full bg-linen group-hover:bg-emeraldDeep group-hover:text-porcelain flex items-center justify-center transition-colors">
+                  <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M5 10h10m0 0-3.5-3.5M15 10l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3: Digestive & Immunity -->
+          <article class="specialty-card bg-white rounded-3xl p-7 border border-emeraldDeep/10 flex flex-col justify-between shadow-sm reveal reveal-delay-2" data-category="digestive">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-sageTint text-emeraldDeep flex items-center justify-center">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65">
+                    <path d="M12 3l7 3v5c0 4.6-3 8.5-7 10-4-1.5-7-5.4-7-10V6l7-3z" stroke-linejoin="round" />
+                    <path d="M9.5 12.2l1.8 1.8 3.5-3.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <span class="text-[11px] uppercase tracking-[0.16em] text-champagne font-semibold" data-i18n="spec.catDig">Gut & Vitality</span>
+              </div>
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="spec.c3Title">Digestive & Immunity</h3>
+              <p class="mt-2.5 text-sm text-mutedSlate leading-relaxed" data-i18n="spec.c3Desc">
+                Restoring digestive rhythm, easing chronic acidity or bowel sensitivity, and strengthening natural day-to-day resilience.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Acidity & Gastritis</span>
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">IBS & Bloating</span>
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Frequent Infections</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-5 border-t border-emeraldDeep/10">
+              <button type="button" class="open-approach-btn w-full inline-flex items-center justify-between text-sm font-semibold text-emeraldDeep hover:text-forestTeal group" data-treatment-id="digestive">
+                <span data-i18n="spec.viewApproach">View Approach</span>
+                <span class="w-8 h-8 rounded-full bg-linen group-hover:bg-emeraldDeep group-hover:text-porcelain flex items-center justify-center transition-colors">
+                  <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M5 10h10m0 0-3.5-3.5M15 10l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 4: Joint & Musculoskeletal -->
+          <article class="specialty-card bg-white rounded-3xl p-7 border border-emeraldDeep/10 flex flex-col justify-between shadow-sm reveal" data-category="joints">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-sageTint text-emeraldDeep flex items-center justify-center">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65">
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M12 4v5m0 6v5M4 12h5m6 0h5" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <span class="text-[11px] uppercase tracking-[0.16em] text-champagne font-semibold" data-i18n="spec.catJoint">Mobility</span>
+              </div>
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="spec.c4Title">Joint & Pain Relief</h3>
+              <p class="mt-2.5 text-sm text-mutedSlate leading-relaxed" data-i18n="spec.c4Desc">
+                Supporting joint comfort, easing morning stiffness, and improving mobility naturally without heavy analgesic reliance.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Arthritis & Knee Pain</span>
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Cervical & Sciatica</span>
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Muscle Stiffness</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-5 border-t border-emeraldDeep/10">
+              <button type="button" class="open-approach-btn w-full inline-flex items-center justify-between text-sm font-semibold text-emeraldDeep hover:text-forestTeal group" data-treatment-id="joints">
+                <span data-i18n="spec.viewApproach">View Approach</span>
+                <span class="w-8 h-8 rounded-full bg-linen group-hover:bg-emeraldDeep group-hover:text-porcelain flex items-center justify-center transition-colors">
+                  <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M5 10h10m0 0-3.5-3.5M15 10l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 5: Stress, Migraine & Lifestyle -->
+          <article class="specialty-card bg-white rounded-3xl p-7 border border-emeraldDeep/10 flex flex-col justify-between shadow-sm reveal reveal-delay-1" data-category="joints">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-sageTint text-emeraldDeep flex items-center justify-center">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65">
+                    <path d="M12 4a8 8 0 1 0 8 8" stroke-linecap="round" />
+                    <path d="M15.5 5.5c2 1 3 2.5 3 4.5" stroke-linecap="round" />
+                    <circle cx="12" cy="12" r="2.5" />
+                  </svg>
+                </div>
+                <span class="text-[11px] uppercase tracking-[0.16em] text-champagne font-semibold" data-i18n="spec.catLife">Mind & Rhythm</span>
+              </div>
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="spec.c5Title">Migraine, Sleep & Lifestyle</h3>
+              <p class="mt-2.5 text-sm text-mutedSlate leading-relaxed" data-i18n="spec.c5Desc">
+                Holistic constitutional guidance for tension headaches, disturbed sleep cycles, stress fatigue, and metabolic balance.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Migraine & Headaches</span>
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Sleep & Stress</span>
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Thyroid Support</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-5 border-t border-emeraldDeep/10">
+              <button type="button" class="open-approach-btn w-full inline-flex items-center justify-between text-sm font-semibold text-emeraldDeep hover:text-forestTeal group" data-treatment-id="lifestyle">
+                <span data-i18n="spec.viewApproach">View Approach</span>
+                <span class="w-8 h-8 rounded-full bg-linen group-hover:bg-emeraldDeep group-hover:text-porcelain flex items-center justify-center transition-colors">
+                  <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M5 10h10m0 0-3.5-3.5M15 10l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 6: Child & Women's Wellness -->
+          <article class="specialty-card bg-white rounded-3xl p-7 border border-emeraldDeep/10 flex flex-col justify-between shadow-sm reveal reveal-delay-2" data-category="family">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-sageTint text-emeraldDeep flex items-center justify-center">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65">
+                    <path d="M12 20.5s-7.5-4.8-7.5-10.2A4.3 4.3 0 0 1 12 7.5a4.3 4.3 0 0 1 7.5 2.8c0 5.4-7.5 10.2-7.5 10.2z" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <span class="text-[11px] uppercase tracking-[0.16em] text-champagne font-semibold" data-i18n="spec.catFamily">Family Care</span>
+              </div>
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="spec.c6Title">Child & Women's Wellness</h3>
+              <p class="mt-2.5 text-sm text-mutedSlate leading-relaxed" data-i18n="spec.c6Desc">
+                Gentle, compassionate homeopathy tailored for childhood immunity, recurring tonsils, PCOS, and hormonal transitions.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Child Immunity & Tonsils</span>
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">PCOS & Cycle Balance</span>
+                <span class="px-2.5 py-1 rounded-full bg-linen text-xs text-charcoalInk/80">Menopausal Care</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-5 border-t border-emeraldDeep/10">
+              <button type="button" class="open-approach-btn w-full inline-flex items-center justify-between text-sm font-semibold text-emeraldDeep hover:text-forestTeal group" data-treatment-id="family">
+                <span data-i18n="spec.viewApproach">View Approach</span>
+                <span class="w-8 h-8 rounded-full bg-linen group-hover:bg-emeraldDeep group-hover:text-porcelain flex items-center justify-center transition-colors">
+                  <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M5 10h10m0 0-3.5-3.5M15 10l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. 4-STEP PATIENT JOURNEY TIMELINE ("HOW YOUR CONSULTATION WORKS")
+         ======================================================================= -->
+    <section id="care-process" class="py-16 sm:py-24 bg-linen/70 border-y border-emeraldDeep/[0.07]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+          <p class="text-xs uppercase tracking-[0.22em] text-champagne font-semibold mb-3" data-i18n="journey.eyebrow">Structured Care Pathway</p>
+          <h2 class="section-headline font-editorial font-medium text-emeraldDeep" data-i18n="journey.title">How Your Consultation Works</h2>
+          <p class="mt-3 text-base text-mutedSlate" data-i18n="journey.subtitle">
+            Every step is designed for clarity, comfort, and attentive follow-through from your very first visit.
+          </p>
+        </div>
+
+        <!-- Responsive Timeline Grid -->
+        <div class="relative">
+          <!-- Horizontal Connector Line (Desktop) -->
+          <div class="hidden lg:block absolute top-10 left-[12%] right-[12%] h-[1.5px] bg-gradient-to-r from-emeraldDeep/15 via-champagne/70 to-emeraldDeep/15" aria-hidden="true"></div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
+            <!-- Step 01 -->
+            <div class="relative bg-white rounded-3xl p-7 border border-emeraldDeep/10 shadow-sm reveal">
+              <div class="w-12 h-12 rounded-2xl bg-emeraldDeep text-porcelain font-editorial text-xl font-semibold flex items-center justify-center shadow-md mb-6 relative z-10">
+                01
+              </div>
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="journey.s1Title">Book Your Slot</h3>
+              <p class="mt-2.5 text-sm text-mutedSlate leading-relaxed" data-i18n="journey.s1Desc">
+                Choose a convenient morning or evening slot online or via WhatsApp so your consultation begins with minimal waiting.
+              </p>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="relative bg-white rounded-3xl p-7 border border-emeraldDeep/10 shadow-sm reveal reveal-delay-1">
+              <div class="w-12 h-12 rounded-2xl bg-emeraldDeep text-porcelain font-editorial text-xl font-semibold flex items-center justify-center shadow-md mb-6 relative z-10">
+                02
+              </div>
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="journey.s2Title">Detailed Case-Taking</h3>
+              <p class="mt-2.5 text-sm text-mutedSlate leading-relaxed" data-i18n="journey.s2Desc">
+                Dr. Shinde listens carefully to your chief concerns, medical history, daily habits, and triggers to understand the full picture.
+              </p>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="relative bg-white rounded-3xl p-7 border border-emeraldDeep/10 shadow-sm reveal reveal-delay-2">
+              <div class="w-12 h-12 rounded-2xl bg-emeraldDeep text-porcelain font-editorial text-xl font-semibold flex items-center justify-center shadow-md mb-6 relative z-10">
+                03
+              </div>
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="journey.s3Title">Personalized Remedy Plan</h3>
+              <p class="mt-2.5 text-sm text-mutedSlate leading-relaxed" data-i18n="journey.s3Desc">
+                Receive an individualized constitutional prescription along with practical dietary, sleep, and lifestyle pointers.
+              </p>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="relative bg-white rounded-3xl p-7 border border-emeraldDeep/10 shadow-sm reveal reveal-delay-3">
+              <div class="w-12 h-12 rounded-2xl bg-champagne text-emeraldDeep font-editorial text-xl font-bold flex items-center justify-center shadow-md mb-6 relative z-10">
+                04
+              </div>
+              <h3 class="font-editorial text-2xl font-semibold text-emeraldDeep" data-i18n="journey.s4Title">Guided Follow-Up</h3>
+              <p class="mt-2.5 text-sm text-mutedSlate leading-relaxed" data-i18n="journey.s4Desc">
+                Periodic progress reviews allow careful potency adjustments as your symptoms settle and vitality steadies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. EDITORIAL DOCTOR PROFILE SECTION
+         ======================================================================= -->
+    <section id="doctor" class="py-16 sm:py-24 bg-porcelain">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+          <!-- Left: Studio-Grade Framed Doctor Portrait Placeholder -->
+          <div class="lg:col-span-5 reveal">
+            <div class="relative p-3 sm:p-4 rounded-[2rem] bg-white border border-emeraldDeep/10 shadow-xl">
+              <!-- Outer Gold Accent Corner Frame -->
+              <div class="portrait-frame rounded-[1.5rem] aspect-[4/5] w-full border border-champagne/40 relative overflow-hidden flex flex-col items-center justify-center p-8 text-center">
+                <!-- Subtle Decorative Botanical Rings -->
+                <svg class="absolute inset-0 w-full h-full text-emeraldDeep/[0.06] pointer-events-none" viewBox="0 0 400 500" fill="none" aria-hidden="true">
+                  <circle cx="200" cy="210" r="145" stroke="currentColor" stroke-width="1" stroke-dasharray="3 6" />
+                  <circle cx="200" cy="210" r="110" stroke="currentColor" stroke-width="1" />
+                  <path d="M40 460 Q200 390 360 460" stroke="currentColor" stroke-width="1.2" />
+                </svg>
+
+                <!-- Studio Medical-Botanical Emblem -->
+                <div class="relative z-10 w-24 h-24 rounded-full bg-white/90 border border-champagne/45 shadow-md flex items-center justify-center mb-6">
+                  <svg class="w-12 h-12 text-emeraldDeep" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                    <path d="M24 7C28.5 13.8 30 19.5 24 26.5C18 19.5 19.5 13.8 24 7Z" stroke="#C49A5C" stroke-width="1.7" stroke-linejoin="round" />
+                    <path d="M24 26.5C30.8 21 37 20.5 40.5 26.5C35.8 32 29.5 31.5 24 26.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    <path d="M24 26.5C17.2 21 11 20.5 7.5 26.5C12.2 32 18.5 31.5 24 26.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    <path d="M24 29.5V41M18 35.2H30" stroke="#C49A5C" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </div>
+
+                <span class="relative z-10 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emeraldDeep/10 text-emeraldDeep text-[11px] uppercase tracking-[0.18em] font-semibold">
+                  Doctor Portrait Placeholder
+                </span>
+                <p class="relative z-10 font-editorial text-2xl font-semibold text-emeraldDeep mt-4">
+                  Dr. Nandkishor Arun Shinde
+                </p>
+                <p class="relative z-10 text-xs text-mutedSlate mt-1.5 max-w-[230px] leading-relaxed">
+                  Studio portrait frame ready for Dr. Shinde’s real photograph (4:5 portrait ratio).
+                </p>
+
+                <!-- Bottom Signature Plate -->
+                <div class="absolute bottom-4 inset-x-4 rounded-2xl bg-white/85 backdrop-blur-md border border-emeraldDeep/10 px-4 py-3 flex items-center justify-between text-left">
+                  <div>
+                    <p class="text-xs font-semibold text-emeraldDeep" data-i18n="brand.name">Gajanan Clinic</p>
+                    <p class="text-[11px] text-mutedSlate" data-i18n="doctor.locTag">Satara, Maharashtra</p>
+                  </div>
+                  <span class="text-[11px] font-medium text-champagne uppercase tracking-wider">Homeopathy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Editorial Biography & Care Principles -->
+          <div class="lg:col-span-7 space-y-6 reveal reveal-delay-1">
+            <div>
+              <p class="text-xs uppercase tracking-[0.22em] text-champagne font-semibold mb-3" data-i18n="doctor.eyebrow">Lead Practitioner</p>
+              <h2 class="section-headline font-editorial font-medium text-emeraldDeep">Dr. Nandkishor Arun Shinde</h2>
+              <p class="mt-1.5 text-base font-medium text-forestTeal" data-i18n="doctor.role">Homeopathic Practitioner • Gajanan Clinic, Satara</p>
+            </div>
+
+            <!-- Honest Credential Placeholder Tag (Zero Fabricated Degrees/Reg Nos) -->
+            <div class="inline-flex flex-wrap items-center gap-2 px-4 py-2 rounded-2xl bg-linen border border-emeraldDeep/12 text-xs font-medium text-mutedSlate">
+              <svg class="w-4 h-4 text-champagne shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 15l-3.5 2 .7-4-2.9-2.8 4-.6L12 6l1.7 3.6 4 .6-2.9 2.8.7 4L12 15z" stroke-linejoin="round" />
+              </svg>
+              <span data-i18n="doctor.credPlaceholder">Qualifications & Registration No. — Ready to Update</span>
+            </div>
+
+            <!-- Editorial Quote -->
+            <blockquote class="relative pl-6 border-l-2 border-champagne py-1">
+              <p class="font-editorial italic text-xl sm:text-2xl text-charcoalInk leading-snug" data-i18n="doctor.quote">
+                “True healing begins when a patient feels genuinely heard. In homeopathy, every detail of a person’s health story guides us toward gentle, lasting restoration.”
+              </p>
+            </blockquote>
+
+            <p class="text-sm sm:text-base text-mutedSlate leading-relaxed" data-i18n="doctor.bio">
+              At Gajanan Clinic in Satara, Dr. Nandkishor Arun Shinde combines classical homeopathic principles with a calm, structured modern consultation experience. Each patient receives attentive case-taking, transparent communication, and follow-up support tailored to long-term wellbeing.
+            </p>
+
+            <!-- Care Principles Checklist -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+              <div class="flex items-start gap-3 p-4 rounded-2xl bg-white border border-emeraldDeep/10">
+                <span class="w-6 h-6 rounded-full bg-sageTint text-emeraldDeep flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M4.5 10.5l3.5 3.5 7.5-8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-sm font-semibold text-emeraldDeep" data-i18n="doctor.p1Title">Individualized Prescribing</p>
+                  <p class="text-xs text-mutedSlate mt-0.5" data-i18n="doctor.p1Desc">Remedies matched to the person, not a one-size template.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-4 rounded-2xl bg-white border border-emeraldDeep/10">
+                <span class="w-6 h-6 rounded-full bg-sageTint text-emeraldDeep flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M4.5 10.5l3.5 3.5 7.5-8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-sm font-semibold text-emeraldDeep" data-i18n="doctor.p2Title">Clear Patient Guidance</p>
+                  <p class="text-xs text-mutedSlate mt-0.5" data-i18n="doctor.p2Desc">Honest timelines, dosage clarity, and realistic expectations.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-4 rounded-2xl bg-white border border-emeraldDeep/10">
+                <span class="w-6 h-6 rounded-full bg-sageTint text-emeraldDeep flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M4.5 10.5l3.5 3.5 7.5-8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-sm font-semibold text-emeraldDeep" data-i18n="doctor.p3Title">Respectful Privacy</p>
+                  <p class="text-xs text-mutedSlate mt-0.5" data-i18n="doctor.p3Desc">Confidential, unhurried one-on-one consultations.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-4 rounded-2xl bg-white border border-emeraldDeep/10">
+                <span class="w-6 h-6 rounded-full bg-sageTint text-emeraldDeep flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M4.5 10.5l3.5 3.5 7.5-8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-sm font-semibold text-emeraldDeep" data-i18n="doctor.p4Title">Marathi & English Care</p>
+                  <p class="text-xs text-mutedSlate mt-0.5" data-i18n="doctor.p4Desc">Comfortable communication in your preferred language.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. INTERACTIVE APPOINTMENT BOOKING SECTION (100% STATIC & SECURE)
+         ======================================================================= -->
+    <section id="booking" class="py-16 sm:py-24 bg-sageTint/45 border-y border-emeraldDeep/[0.08] subtle-grain">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+          <!-- Left: Booking Context & Preparation Checklist -->
+          <div class="lg:col-span-5 space-y-6 reveal">
+            <div>
+              <p class="text-xs uppercase tracking-[0.22em] text-champagne font-semibold mb-3" data-i18n="book.eyebrow">Schedule a Visit</p>
+              <h2 class="section-headline font-editorial font-medium text-emeraldDeep" data-i18n="book.title">Reserve Your Consultation</h2>
+              <p class="mt-3 text-sm sm:text-base text-mutedSlate leading-relaxed" data-i18n="book.subtitle">
+                Pick a morning or evening slot below. After submitting, you’ll receive an instant booking summary with a one-tap WhatsApp confirmation link.
+              </p>
+            </div>
+
+            <div class="rounded-3xl bg-white/90 border border-emeraldDeep/10 p-6 space-y-4 shadow-sm">
+              <p class="text-xs uppercase tracking-[0.16em] text-emeraldDeep font-semibold" data-i18n="book.prepTitle">Helpful for Your First Visit</p>
+              <ul class="space-y-3 text-sm text-mutedSlate">
+                <li class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne mt-2 shrink-0"></span>
+                  <span data-i18n="book.prep1">Carry recent lab reports or prescriptions if you have any.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne mt-2 shrink-0"></span>
+                  <span data-i18n="book.prep2">Plan 25–40 minutes for an unhurried first constitutional case-taking.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne mt-2 shrink-0"></span>
+                  <span data-i18n="book.prep3">No payment is required online; confirm directly at the clinic desk.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="rounded-2xl bg-emeraldDeep/5 border border-emeraldDeep/10 px-4 py-3 text-xs text-mutedSlate leading-relaxed">
+              <strong class="text-emeraldDeep">Demo Mode Notice:</strong> This static booking workflow validates your inputs locally and creates a pre-filled WhatsApp message using a demo placeholder number (<span class="font-mono">+91 90000 00000</span>) ready to be replaced with Gajanan Clinic’s live reception number.
+            </div>
+          </div>
+
+          <!-- Right: Interactive Booking Card -->
+          <div class="lg:col-span-7 reveal reveal-delay-1">
+            <div class="bg-white rounded-[2rem] border border-emeraldDeep/12 shadow-xl p-6 sm:p-8 lg:p-9">
+
+              <!-- FORM VIEW -->
+              <form id="booking-form" novalidate class="space-y-6">
+
+                <!-- 1. Visit Type Segmented Toggle -->
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-[0.14em] text-emeraldDeep mb-2.5" data-i18n="book.visitType">1. Select Visit Type</label>
+                  <div class="grid grid-cols-2 p-1.5 rounded-2xl bg-linen border border-emeraldDeep/10" role="radiogroup" aria-label="Visit Type">
+                    <button type="button" class="visit-tab selected py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all" data-visit="First Consultation" aria-checked="true" role="radio">
+                      <span data-i18n="book.firstVisit">First Consultation</span>
+                    </button>
+                    <button type="button" class="visit-tab py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold text-mutedSlate hover:text-emeraldDeep transition-all" data-visit="Follow-Up Visit" aria-checked="false" role="radio">
+                      <span data-i18n="book.followUp">Follow-Up Visit</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 2. Focus Area & Preferred Date -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="booking-focus" class="block text-xs font-semibold uppercase tracking-[0.14em] text-emeraldDeep mb-2" data-i18n="book.focusLabel">2. Focus Area</label>
+                    <select id="booking-focus" name="focusArea" class="w-full px-4 py-3.5 rounded-2xl bg-porcelain border border-emeraldDeep/15 text-sm text-charcoalInk font-medium focus:border-emeraldDeep focus:bg-white transition-colors">
+                      <option value="General Homeopathic Consultation">General Homeopathic Consultation</option>
+                      <option value="Skin & Hair Care">Skin & Hair Care</option>
+                      <option value="Respiratory & Allergies">Respiratory & Allergies</option>
+                      <option value="Digestive & Immunity">Digestive & Immunity</option>
+                      <option value="Joint & Pain Relief">Joint & Pain Relief</option>
+                      <option value="Migraine, Sleep & Lifestyle">Migraine, Sleep & Lifestyle</option>
+                      <option value="Child & Women's Wellness">Child & Women's Wellness</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="booking-date" class="block text-xs font-semibold uppercase tracking-[0.14em] text-emeraldDeep mb-2" data-i18n="book.dateLabel">3. Preferred Date</label>
+                    <input type="date" id="booking-date" name="date" required class="w-full px-4 py-3.5 rounded-2xl bg-porcelain border border-emeraldDeep/15 text-sm text-charcoalInk font-medium focus:border-emeraldDeep focus:bg-white transition-colors" />
+                    <p id="err-date" class="mt-1.5 text-xs text-red-700 hidden" role="alert"></p>
+                  </div>
+                </div>
+
+                <!-- 3. Time Slot Selection (Morning & Evening Pills) -->
+                <div>
+                  <div class="flex items-center justify-between mb-2.5">
+                    <label class="block text-xs font-semibold uppercase tracking-[0.14em] text-emeraldDeep" data-i18n="book.slotLabel">4. Choose Preferred Time Slot</label>
+                    <span class="text-[11px] text-mutedSlate" data-i18n="infoCard.editableTag">Editable Demo Hours</span>
+                  </div>
+
+                  <div class="space-y-3">
+                    <!-- Morning Slots -->
+                    <div>
+                      <p class="text-[11px] uppercase tracking-[0.14em] text-mutedSlate font-semibold mb-2" data-i18n="infoCard.morning">Morning Session</p>
+                      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                        <button type="button" class="slot-pill selected px-3 py-2.5 rounded-xl border border-emeraldDeep/15 bg-porcelain text-xs sm:text-sm font-medium text-charcoalInk" data-slot="10:00 AM (Morning)">10:00 AM</button>
+                        <button type="button" class="slot-pill px-3 py-2.5 rounded-xl border border-emeraldDeep/15 bg-porcelain text-xs sm:text-sm font-medium text-charcoalInk hover:border-emeraldDeep/40" data-slot="10:45 AM (Morning)">10:45 AM</button>
+                        <button type="button" class="slot-pill px-3 py-2.5 rounded-xl border border-emeraldDeep/15 bg-porcelain text-xs sm:text-sm font-medium text-charcoalInk hover:border-emeraldDeep/40" data-slot="11:30 AM (Morning)">11:30 AM</button>
+                        <button type="button" class="slot-pill px-3 py-2.5 rounded-xl border border-emeraldDeep/15 bg-porcelain text-xs sm:text-sm font-medium text-charcoalInk hover:border-emeraldDeep/40" data-slot="12:15 PM (Morning)">12:15 PM</button>
+                      </div>
+                    </div>
+
+                    <!-- Evening Slots -->
+                    <div>
+                      <p class="text-[11px] uppercase tracking-[0.14em] text-mutedSlate font-semibold mb-2" data-i18n="infoCard.evening">Evening Session</p>
+                      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                        <button type="button" class="slot-pill px-3 py-2.5 rounded-xl border border-emeraldDeep/15 bg-porcelain text-xs sm:text-sm font-medium text-charcoalInk hover:border-emeraldDeep/40" data-slot="5:30 PM (Evening)">5:30 PM</button>
+                        <button type="button" class="slot-pill px-3 py-2.5 rounded-xl border border-emeraldDeep/15 bg-porcelain text-xs sm:text-sm font-medium text-charcoalInk hover:border-emeraldDeep/40" data-slot="6:15 PM (Evening)">6:15 PM</button>
+                        <button type="button" class="slot-pill px-3 py-2.5 rounded-xl border border-emeraldDeep/15 bg-porcelain text-xs sm:text-sm font-medium text-charcoalInk hover:border-emeraldDeep/40" data-slot="7:00 PM (Evening)">7:00 PM</button>
+                        <button type="button" class="slot-pill px-3 py-2.5 rounded-xl border border-emeraldDeep/15 bg-porcelain text-xs sm:text-sm font-medium text-charcoalInk hover:border-emeraldDeep/40" data-slot="7:45 PM (Evening)">7:45 PM</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 4. Patient Details -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+                  <div>
+                    <label for="patient-name" class="block text-xs font-semibold uppercase tracking-[0.14em] text-emeraldDeep mb-2" data-i18n="book.nameLabel">Patient Full Name *</label>
+                    <input type="text" id="patient-name" name="patientName" autocomplete="name" maxlength="80" placeholder="e.g., Aarav Deshmukh" required class="w-full px-4 py-3.5 rounded-2xl bg-porcelain border border-emeraldDeep/15 text-sm text-charcoalInk placeholder:text-mutedSlate/60 focus:border-emeraldDeep focus:bg-white transition-colors" />
+                    <p id="err-name" class="mt-1.5 text-xs text-red-700 hidden" role="alert"></p>
+                  </div>
+
+                  <div>
+                    <label for="patient-phone" class="block text-xs font-semibold uppercase tracking-[0.14em] text-emeraldDeep mb-2" data-i18n="book.phoneLabel">Mobile Number *</label>
+                    <input type="tel" id="patient-phone" name="patientPhone" autocomplete="tel" inputmode="numeric" maxlength="15" placeholder="10-digit mobile number" required class="w-full px-4 py-3.5 rounded-2xl bg-porcelain border border-emeraldDeep/15 text-sm text-charcoalInk placeholder:text-mutedSlate/60 focus:border-emeraldDeep focus:bg-white transition-colors" />
+                    <p id="err-phone" class="mt-1.5 text-xs text-red-700 hidden" role="alert"></p>
+                  </div>
+                </div>
+
+                <!-- Optional Note -->
+                <div>
+                  <label for="patient-note" class="block text-xs font-semibold uppercase tracking-[0.14em] text-emeraldDeep mb-2" data-i18n="book.noteLabel">Brief Health Note (Optional)</label>
+                  <textarea id="patient-note" name="patientNote" rows="2" maxlength="240" placeholder="Share primary symptom or preferred language (Marathi / English)..." class="w-full px-4 py-3 rounded-2xl bg-porcelain border border-emeraldDeep/15 text-sm text-charcoalInk placeholder:text-mutedSlate/60 focus:border-emeraldDeep focus:bg-white transition-colors resize-none"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full py-4 px-6 rounded-full bg-emeraldDeep text-porcelain font-semibold text-sm sm:text-base hover:bg-forestTeal shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2.5">
+                  <span data-i18n="book.submitBtn">Generate Appointment Request</span>
+                  <svg class="w-4 h-4 text-champagne" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4.5 10h11m0 0-4-4m4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </form>
+
+              <!-- CONFIRMATION VIEW (Populated strictly via textContent — Zero innerHTML XSS) -->
+              <div id="booking-confirmation" class="hidden space-y-6" aria-live="polite">
+                <div class="flex items-start gap-4 pb-5 border-b border-emeraldDeep/10">
+                  <div class="w-12 h-12 rounded-2xl bg-sageTint text-emeraldDeep flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-[0.18em] text-champagne font-semibold" data-i18n="book.confEyebrow">Request Prepared</p>
+                    <h3 class="font-editorial text-2xl sm:text-3xl font-semibold text-emeraldDeep mt-0.5" data-i18n="book.confTitle">Appointment Summary Ready</h3>
+                    <p class="text-xs sm:text-sm text-mutedSlate mt-1" data-i18n="book.confSub">Tap “Confirm via WhatsApp” below to send your slot details directly to Gajanan Clinic.</p>
+                  </div>
+                </div>
+
+                <!-- Secure Summary Grid -->
+                <dl class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 bg-porcelain rounded-2xl p-5 border border-emeraldDeep/10 text-sm">
+                  <div>
+                    <dt class="text-[11px] uppercase tracking-wider text-mutedSlate">Reference ID</dt>
+                    <dd id="conf-ref" class="font-mono font-semibold text-emeraldDeep mt-0.5"></dd>
+                  </div>
+                  <div>
+                    <dt class="text-[11px] uppercase tracking-wider text-mutedSlate">Visit Type</dt>
+                    <dd id="conf-visit" class="font-semibold text-charcoalInk mt-0.5"></dd>
+                  </div>
+                  <div>
+                    <dt class="text-[11px] uppercase tracking-wider text-mutedSlate">Patient Name</dt>
+                    <dd id="conf-name" class="font-semibold text-charcoalInk mt-0.5"></dd>
+                  </div>
+                  <div>
+                    <dt class="text-[11px] uppercase tracking-wider text-mutedSlate">Mobile Number</dt>
+                    <dd id="conf-phone" class="font-semibold text-charcoalInk mt-0.5"></dd>
+                  </div>
+                  <div>
+                    <dt class="text-[11px] uppercase tracking-wider text-mutedSlate">Focus Area</dt>
+                    <dd id="conf-focus" class="font-semibold text-charcoalInk mt-0.5"></dd>
+                  </div>
+                  <div>
+                    <dt class="text-[11px] uppercase tracking-wider text-mutedSlate">Preferred Slot</dt>
+                    <dd id="conf-datetime" class="font-semibold text-emeraldDeep mt-0.5"></dd>
+                  </div>
+                  <div class="sm:col-span-2 hidden" id="conf-note-wrap">
+                    <dt class="text-[11px] uppercase tracking-wider text-mutedSlate">Note</dt>
+                    <dd id="conf-note" class="text-charcoalInk mt-0.5 break-words"></dd>
+                  </div>
+                </dl>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <a id="whatsapp-confirm-link" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-full bg-emeraldDeep text-porcelain font-semibold text-sm hover:bg-forestTeal shadow-lg transition-all">
+                    <svg class="w-5 h-5 text-champagne" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke-linejoin="round" />
+                    </svg>
+                    <span data-i18n="book.waBtn">Confirm via WhatsApp</span>
+                  </a>
+
+                  <button type="button" id="copy-summary-btn" class="px-5 py-4 rounded-full bg-linen text-emeraldDeep border border-emeraldDeep/15 font-semibold text-sm hover:bg-sageTint transition-colors">
+                    Copy Summary
+                  </button>
+                </div>
+
+                <div class="flex items-center justify-between text-xs text-mutedSlate pt-1">
+                  <span>Demo WhatsApp destination: +91 90000 00000 (Editable)</span>
+                  <button type="button" id="reset-booking-btn" class="font-semibold text-emeraldDeep underline underline-offset-4 hover:text-forestTeal">
+                    Modify Details
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. SMOOTH CSS GRID FAQ ACCORDION
+         ======================================================================= -->
+    <section id="faq" class="py-16 sm:py-24 bg-porcelain">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-12 reveal">
+          <p class="text-xs uppercase tracking-[0.22em] text-champagne font-semibold mb-3" data-i18n="faq.eyebrow">Patient Guidance</p>
+          <h2 class="section-headline font-editorial font-medium text-emeraldDeep" data-i18n="faq.title">Frequently Asked Questions</h2>
+          <p class="mt-3 text-base text-mutedSlate" data-i18n="faq.subtitle">
+            Clear answers to help you feel confident and prepared before visiting Gajanan Clinic in Satara.
+          </p>
+        </div>
+
+        <div class="space-y-3.5 reveal" id="faq-accordion">
+
+          <!-- FAQ 1 -->
+          <div class="accordion-item bg-white rounded-3xl border border-emeraldDeep/10 overflow-hidden shadow-sm" data-open="true">
+            <button type="button" class="accordion-trigger w-full px-6 py-5 flex items-center justify-between gap-4 text-left" aria-expanded="true" aria-controls="faq-panel-1">
+              <span class="font-editorial text-xl sm:text-2xl font-semibold text-emeraldDeep" data-i18n="faq.q1">How does a homeopathic consultation differ from a regular clinic visit?</span>
+              <span class="accordion-icon w-9 h-9 rounded-full bg-linen text-emeraldDeep flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 4v12M4 10h12" stroke-linecap="round" />
+                </svg>
+              </span>
+            </button>
+            <div id="faq-panel-1" class="accordion-content">
+              <div class="accordion-inner">
+                <p class="px-6 pb-6 text-sm sm:text-[15px] text-mutedSlate leading-relaxed" data-i18n="faq.a1">
+                  Constitutional homeopathy looks beyond isolated symptoms. Dr. Shinde explores when your discomfort started, what improves or aggravates it, your sleep quality, digestion, stress levels, and family tendencies—allowing a tailored remedy selection focused on root-cause balance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item bg-white rounded-3xl border border-emeraldDeep/10 overflow-hidden shadow-sm" data-open="false">
+            <button type="button" class="accordion-trigger w-full px-6 py-5 flex items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-panel-2">
+              <span class="font-editorial text-xl sm:text-2xl font-semibold text-emeraldDeep" data-i18n="faq.q2">Are homeopathic remedies safe for children and senior citizens?</span>
+              <span class="accordion-icon w-9 h-9 rounded-full bg-linen text-emeraldDeep flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 4v12M4 10h12" stroke-linecap="round" />
+                </svg>
+              </span>
+            </button>
+            <div id="faq-panel-2" class="accordion-content">
+              <div class="accordion-inner">
+                <p class="px-6 pb-6 text-sm sm:text-[15px] text-mutedSlate leading-relaxed" data-i18n="faq.a2">
+                  Yes. When prescribed by a qualified practitioner after proper evaluation, homeopathic remedies are gentle, non-habit-forming, and easy for children and elders to take. If you are already taking essential conventional medicines, please inform Dr. Shinde during your consultation—never stop ongoing prescriptions abruptly without medical guidance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item bg-white rounded-3xl border border-emeraldDeep/10 overflow-hidden shadow-sm" data-open="false">
+            <button type="button" class="accordion-trigger w-full px-6 py-5 flex items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-panel-3">
+              <span class="font-editorial text-xl sm:text-2xl font-semibold text-emeraldDeep" data-i18n="faq.q3">What should I bring to my first visit at Gajanan Clinic?</span>
+              <span class="accordion-icon w-9 h-9 rounded-full bg-linen text-emeraldDeep flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 4v12M4 10h12" stroke-linecap="round" />
+                </svg>
+              </span>
+            </button>
+            <div id="faq-panel-3" class="accordion-content">
+              <div class="accordion-inner">
+                <p class="px-6 pb-6 text-sm sm:text-[15px] text-mutedSlate leading-relaxed" data-i18n="faq.a3">
+                  Please bring any recent blood tests, imaging reports, or a list of current medications and supplements. For skin concerns, noting when flare-ups occur is also helpful. No fasting is required before your consultation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item bg-white rounded-3xl border border-emeraldDeep/10 overflow-hidden shadow-sm" data-open="false">
+            <button type="button" class="accordion-trigger w-full px-6 py-5 flex items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-panel-4">
+              <span class="font-editorial text-xl sm:text-2xl font-semibold text-emeraldDeep" data-i18n="faq.q4">How long does an initial consultation take?</span>
+              <span class="accordion-icon w-9 h-9 rounded-full bg-linen text-emeraldDeep flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 4v12M4 10h12" stroke-linecap="round" />
+                </svg>
+              </span>
+            </button>
+            <div id="faq-panel-4" class="accordion-content">
+              <div class="accordion-inner">
+                <p class="px-6 pb-6 text-sm sm:text-[15px] text-mutedSlate leading-relaxed" data-i18n="faq.a4">
+                  A first consultation for chronic concerns typically takes 25 to 40 minutes so your case can be documented thoroughly. Follow-up reviews are shorter—usually 10 to 15 minutes—to track improvement and refine your remedy schedule.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item bg-white rounded-3xl border border-emeraldDeep/10 overflow-hidden shadow-sm" data-open="false">
+            <button type="button" class="accordion-trigger w-full px-6 py-5 flex items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-panel-5">
+              <span class="font-editorial text-xl sm:text-2xl font-semibold text-emeraldDeep" data-i18n="faq.q5">Do I need a prior appointment to visit in Satara?</span>
+              <span class="accordion-icon w-9 h-9 rounded-full bg-linen text-emeraldDeep flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 4v12M4 10h12" stroke-linecap="round" />
+                </svg>
+              </span>
+            </button>
+            <div id="faq-panel-5" class="accordion-content">
+              <div class="accordion-inner">
+                <p class="px-6 pb-6 text-sm sm:text-[15px] text-mutedSlate leading-relaxed" data-i18n="faq.a5">
+                  Booking a slot ahead of time is strongly recommended—especially for first-time chronic consultations—so we can dedicate focused time to your case without keeping you waiting at reception.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. LOCATION, TIMINGS & LUXURY EMERALD FOOTER
+         ======================================================================= -->
+    <section id="contact" class="bg-emeraldDeep text-porcelain pt-16 sm:pt-24 pb-12 relative overflow-hidden">
+      <!-- Subtle Champagne Radial Highlight -->
+      <div class="pointer-events-none absolute -top-40 right-0 w-[460px] h-[460px] rounded-full bg-champagne/10 blur-3xl" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 pb-14 border-b border-white/10">
+
+          <!-- Left: Interactive Satara Location Card -->
+          <div class="lg:col-span-7 rounded-[2rem] bg-white/[0.06] border border-white/12 p-7 sm:p-9 backdrop-blur-md reveal">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+              <div>
+                <p class="text-xs uppercase tracking-[0.22em] text-champagne font-semibold" data-i18n="contact.eyebrow">Visit the Clinic</p>
+                <h2 class="font-editorial text-3xl sm:text-4xl font-medium text-porcelain mt-1" data-i18n="contact.title">Gajanan Clinic, Satara</h2>
+              </div>
+              <span class="px-3.5 py-1.5 rounded-full bg-white/10 text-xs font-medium text-champagne border border-champagne/30">
+                Satara • 415001
+              </span>
+            </div>
+
+            <!-- Stylized Vector Satara Map Graphic (Zero External Broken Images) -->
+            <div class="rounded-2xl bg-forestTeal/60 border border-white/10 p-5 mb-6 relative overflow-hidden">
+              <svg class="w-full h-36 sm:h-40 text-porcelain/15" viewBox="0 0 560 160" fill="none" aria-hidden="true">
+                <!-- Abstract Road Grid -->
+                <path d="M0 42 H560 M0 112 H560 M130 0 V160 M310 0 V160 M450 0 V160" stroke="currentColor" stroke-width="1.2" />
+                <path d="M40 160 Q180 85 310 92 T540 20" stroke="#C49A5C" stroke-opacity="0.4" stroke-width="2.2" stroke-dasharray="6 6" />
+                <!-- Pulsing Location Pin -->
+                <circle cx="310" cy="88" r="26" fill="#C49A5C" fill-opacity="0.16" />
+                <circle cx="310" cy="88" r="10" fill="#C49A5C" />
+                <circle cx="310" cy="88" r="4" fill="#0A362F" />
+              </svg>
+              <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs">
+                <span class="px-3 py-1 rounded-full bg-emeraldDeep/90 text-porcelain border border-white/15 font-medium">
+                  Gajanan Clinic • Satara, Maharashtra
+                </span>
+                <span class="text-porcelain/65 hidden sm:inline">Interactive Google Maps link ready</span>
+              </div>
+            </div>
+
+            <!-- Address Block (Clearly Marked Editable) -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <p class="text-[11px] uppercase tracking-[0.18em] text-champagne font-semibold" data-i18n="contact.addrLabel">Clinic Address</p>
+                <p id="clinic-address-text" class="mt-1 text-base text-porcelain/95 font-medium leading-relaxed">
+                  [Street / Area Address], Satara, Maharashtra 415001 — Editable
+                </p>
+              </div>
+              <button type="button" id="copy-address-btn" class="shrink-0 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/15 text-porcelain text-xs font-semibold border border-white/15 transition-colors">
+                <svg class="w-4 h-4 text-champagne" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="9" y="9" width="13" height="13" rx="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                </svg>
+                <span>Copy Address</span>
+              </button>
+            </div>
+
+            <!-- Quick Call / WhatsApp Actions -->
+            <div class="mt-6 pt-6 border-t border-white/10 flex flex-wrap gap-3">
+              <a href="tel:+919000000000" class="inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-porcelain text-emeraldDeep text-sm font-semibold hover:bg-sageTint transition-colors">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span>Call Clinic (Demo)</span>
+              </a>
+              <a href="https://wa.me/919000000000?text=Hello%20Gajanan%20Clinic%2C%20I%20would%20like%20to%20inquire%20about%20a%20homeopathic%20consultation%20in%20Satara." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-champagne text-emeraldDeep text-sm font-semibold hover:bg-[#d3ab6d] transition-colors">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+                <span>WhatsApp Reception (Demo)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Structured Timings Table -->
+          <div class="lg:col-span-5 rounded-[2rem] bg-white/[0.06] border border-white/12 p-7 sm:p-9 backdrop-blur-md flex flex-col justify-between reveal reveal-delay-1">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-6">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.22em] text-champagne font-semibold" data-i18n="contact.timeEyebrow">Weekly Schedule</p>
+                  <h3 class="font-editorial text-3xl font-medium text-porcelain mt-1" data-i18n="contact.timeTitle">Clinic Timings</h3>
+                </div>
+                <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-porcelain/80">Demo Timings</span>
+              </div>
+
+              <div class="divide-y divide-white/10 text-sm">
+                <div class="py-3.5 flex items-center justify-between gap-4">
+                  <span class="text-porcelain/80 font-medium" data-i18n="contact.daysMonSat">Monday – Saturday</span>
+                  <div class="text-right">
+                    <p class="text-porcelain font-semibold">10:00 AM – 1:30 PM</p>
+                    <p class="text-champagne text-xs mt-0.5">5:30 PM – 8:30 PM</p>
+                  </div>
+                </div>
+                <div class="py-3.5 flex items-center justify-between gap-4">
+                  <span class="text-porcelain/80 font-medium" data-i18n="contact.daySun">Sunday</span>
+                  <span class="px-3 py-1 rounded-full bg-white/10 text-xs text-porcelain/90" data-i18n="contact.sunStatus">By Prior Appointment</span>
+                </div>
+                <div class="py-3.5 flex items-center justify-between gap-4">
+                  <span class="text-porcelain/80 font-medium" data-i18n="contact.practitioner">Practitioner</span>
+                  <span class="text-porcelain font-medium text-right">Dr. Nandkishor Arun Shinde</span>
+                </div>
+                <div class="py-3.5 flex items-center justify-between gap-4">
+                  <span class="text-porcelain/80 font-medium" data-i18n="contact.languages">Languages</span>
+                  <span class="text-porcelain/90 text-right">मराठी • English • हिंदी</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-white/10 text-xs text-porcelain/65 leading-relaxed">
+              Timings and phone numbers shown are editable client-demo placeholders and can be updated effortlessly before launch.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Minimalist Footer Bar -->
+        <footer class="pt-8 flex flex-col md:flex-row items-center justify-between gap-5 text-xs text-porcelain/70">
+          <div class="flex items-center gap-3">
+            <span class="font-editorial text-xl font-semibold text-porcelain" data-i18n="brand.name">Gajanan Clinic</span>
+            <span class="text-white/25">|</span>
+            <span>© <span id="current-year">2026</span> Gajanan Clinic, Satara.</span>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-5">
+            <a href="#specialties" class="hover:text-champagne transition-colors" data-i18n="nav.specialties">Specialties</a>
+            <a href="#care-process" class="hover:text-champagne transition-colors" data-i18n="nav.process">Care Process</a>
+            <a href="#doctor" class="hover:text-champagne transition-colors" data-i18n="nav.doctor">Dr. Shinde</a>
+            <a href="#booking" class="hover:text-champagne transition-colors" data-i18n="nav.cta">Book Consultation</a>
+          </div>
+
+          <button type="button" id="back-to-top" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/15 text-porcelain border border-white/15 transition-colors">
+            <span data-i18n="footer.top">Back to top</span>
+            <svg class="w-3.5 h-3.5 text-champagne" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 15V5m0 0-4 4m4-4 4 4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </footer>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       TREATMENT APPROACH SLIDE-OVER MODAL (ACCESSIBLE)
+       ========================================================================= -->
+  <div id="approach-drawer" class="drawer-backdrop fixed inset-0 z-[80] bg-charcoalInk/50 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+    <div class="drawer-panel ml-auto w-full max-w-lg h-full bg-porcelain shadow-2xl flex flex-col justify-between overflow-y-auto">
+      <div class="p-6 sm:p-8 space-y-6">
+        <!-- Drawer Top -->
+        <div class="flex items-start justify-between gap-4 pb-5 border-b border-emeraldDeep/10">
+          <div>
+            <p id="drawer-category" class="text-xs uppercase tracking-[0.2em] text-champagne font-semibold"></p>
+            <h3 id="drawer-title" class="font-editorial text-3xl font-semibold text-emeraldDeep mt-1"></h3>
+          </div>
+          <button type="button" id="approach-drawer-close" class="w-10 h-10 rounded-full bg-linen text-emeraldDeep flex items-center justify-center hover:bg-sageTint transition-colors shrink-0" aria-label="Close treatment details">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Constitutional Overview -->
+        <div class="space-y-3">
+          <h4 class="text-xs uppercase tracking-[0.16em] text-emeraldDeep font-semibold">Constitutional Homeopathic Approach</h4>
+          <p id="drawer-overview" class="text-sm sm:text-[15px] text-mutedSlate leading-relaxed"></p>
+        </div>
+
+        <!-- Conditions Covered -->
+        <div class="space-y-3">
+          <h4 class="text-xs uppercase tracking-[0.16em] text-emeraldDeep font-semibold">Common Concerns Addressed</h4>
+          <div id="drawer-conditions" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <!-- What Dr. Shinde Evaluates -->
+        <div class="rounded-2xl bg-white border border-emeraldDeep/10 p-5 space-y-3">
+          <h4 class="text-xs uppercase tracking-[0.16em] text-emeraldDeep font-semibold">What We Evaluate During Case-Taking</h4>
+          <ul id="drawer-pillars" class="space-y-2.5 text-sm text-mutedSlate"></ul>
+        </div>
+      </div>
+
+      <!-- Sticky Bottom Drawer CTA -->
+      <div class="p-6 sm:p-8 bg-white border-t border-emeraldDeep/10 flex flex-col sm:flex-row gap-3">
+        <button type="button" id="drawer-consult-btn" class="flex-1 py-3.5 px-6 rounded-full bg-emeraldDeep text-porcelain font-semibold text-sm hover:bg-forestTeal shadow-md transition-all flex items-center justify-center gap-2">
+          <span>Consult for This</span>
+          <svg class="w-4 h-4 text-champagne" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4.5 10h11m0 0-4-4m4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <button type="button" id="drawer-close-secondary" class="py-3.5 px-5 rounded-full bg-linen text-emeraldDeep font-semibold text-sm hover:bg-sageTint transition-colors">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SUBTLE ACCESSIBLE TOAST FEEDBACK (ZERO alert())
+       ========================================================================= -->
+  <div id="toast-bar" class="toast-bar fixed bottom-5 left-1/2 -translate-x-1/2 z-[90] px-5 py-3 rounded-full bg-emeraldDeep text-porcelain text-xs sm:text-sm font-medium shadow-xl border border-champagne/40 flex items-center gap-2.5 pointer-events-none" role="status" aria-live="polite">
+    <span class="w-2 h-2 rounded-full bg-champagne"></span>
+    <span id="toast-message">Copied to clipboard</span>
+  </div>
+
+  <!-- =========================================================================
+       APPLICATION LOGIC — CLEAN, SECURE VANILLA JAVASCRIPT
+       ========================================================================= -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* -----------------------------------------------------------------------
+         1. BILINGUAL DICTIONARY (ENGLISH / MARATHI)
+         ----------------------------------------------------------------------- */
+      const i18n = {
+        en: {
+          'brand.name': 'Gajanan Clinic',
+          'brand.subtitle': 'Satara • Homeopathy',
+          'nav.difference': 'Why Gajanan Clinic',
+          'nav.specialties': 'Specialties',
+          'nav.process': 'Care Process',
+          'nav.doctor': 'Dr. Shinde',
+          'nav.faq': 'FAQ',
+          'nav.contact': 'Contact',
+          'nav.cta': 'Book Consultation',
+          'hero.badge': 'Satara, Maharashtra • Homeopathic Care',
+          'hero.titleLine1': 'Thoughtful Homeopathy,',
+          'hero.titleLine2': 'Rooted in Calm Clinical Care.',
+          'hero.subtitle': 'Led by Dr. Nandkishor Arun Shinde, Gajanan Clinic offers gentle, individualized constitutional homeopathy designed to address chronic and everyday concerns at their root—with unhurried attention for every member of your family.',
+          'hero.primaryCta': 'Book Appointment',
+          'hero.secondaryCta': 'Explore Treatments',
+          'hero.trust1': 'Constitutional Case-Taking',
+          'hero.trust2': 'Gentle & Non-Habit-Forming',
+          'hero.trust3': 'All Ages Welcome',
+          'infoCard.eyebrow': 'Clinic Desk • Satara',
+          'infoCard.title': 'Dr. Nandkishor Arun Shinde',
+          'infoCard.role': 'Homeopathic Practitioner',
+          'infoCard.hoursLabel': 'Consultation Hours',
+          'infoCard.editableTag': 'Editable Demo Hours',
+          'infoCard.morning': 'Morning Session',
+          'infoCard.evening': 'Evening Session',
+          'infoCard.monSat': 'Mon – Sat',
+          'infoCard.sunNote': 'Sun: Prior Appointment',
+          'infoCard.mode1': 'In-Clinic • Satara',
+          'infoCard.mode2': 'Prior Slot Preferred',
+          'infoCard.quickBook': 'Reserve Morning or Evening Slot',
+          'bento.eyebrow': 'Clinical Philosophy',
+          'bento.title': 'The Gajanan Clinic Difference',
+          'bento.subtitle': 'Designed around stillness, attentive listening, and classical homeopathic rigor—so every consultation feels calm, structured, and deeply personal.',
+          'bento.tag1': 'Core Principle',
+          'bento.c1Title': 'Root-Cause Constitutional Homeopathy',
+          'bento.c1Desc': 'Rather than masking recurring symptoms temporarily, constitutional prescribing studies your physical constitution, triggers, sleep, and emotional rhythm to stimulate gentle, lasting internal balance—without harsh side effects or dependency.',
+          'bento.c2Title': 'Dedicated In-Depth Case Taking',
+          'bento.c2Desc': 'Unhurried, private consultations where your complete health narrative, lifestyle patterns, and past reports are evaluated carefully before crafting a tailored remedy plan.',
+          'bento.c3Title': 'Safe for Every Generation',
+          'bento.c3Desc': 'Gentle, palatable remedies thoughtfully selected for infants, school-age children, working adults, and senior family members.',
+          'bento.c4Title': 'Modern Patient Experience',
+          'bento.c4Desc': 'Minimal waiting through structured slot scheduling, clear dosage guidance, and effortless WhatsApp appointment coordination.',
+          'bento.c5Title': 'Accessible Care in Satara',
+          'bento.c5Desc': 'A serene, hygienic clinical environment right in Satara, Maharashtra—offering dependable continuity of care close to home.',
+          'spec.eyebrow': 'Areas of Care',
+          'spec.title': 'Specialties & Homeopathic Focus',
+          'spec.subtitle': 'Select a wellness category to explore conditions addressed and inspect our constitutional clinical approach.',
+          'spec.fAll': 'All',
+          'spec.fSkin': 'Skin & Hair',
+          'spec.fResp': 'Respiratory & Allergies',
+          'spec.fDig': 'Digestive & Immunity',
+          'spec.fJoint': 'Joint & Lifestyle',
+          'spec.fFamily': "Child & Women's Wellness",
+          'spec.catSkin': 'Dermatology',
+          'spec.catResp': 'Airway Balance',
+          'spec.catDig': 'Gut & Vitality',
+          'spec.catJoint': 'Mobility',
+          'spec.catLife': 'Mind & Rhythm',
+          'spec.catFamily': 'Family Care',
+          'spec.c1Title': 'Skin & Hair Care',
+          'spec.c1Desc': 'Internal constitutional support for chronic skin sensitivity, recurring flare-ups, and hair thinning without topical steroid dependence.',
+          'spec.c2Title': 'Respiratory & Allergies',
+          'spec.c2Desc': 'Calming airway hyper-reactivity and seasonal sensitivity so you breathe more comfortably across weather shifts.',
+          'spec.c3Title': 'Digestive & Immunity',
+          'spec.c3Desc': 'Restoring digestive rhythm, easing chronic acidity or bowel sensitivity, and strengthening natural day-to-day resilience.',
+          'spec.c4Title': 'Joint & Pain Relief',
+          'spec.c4Desc': 'Supporting joint comfort, easing morning stiffness, and improving mobility naturally without heavy analgesic reliance.',
+          'spec.c5Title': 'Migraine, Sleep & Lifestyle',
+          'spec.c5Desc': 'Holistic constitutional guidance for tension headaches, disturbed sleep cycles, stress fatigue, and metabolic balance.',
+          'spec.c6Title': "Child & Women's Wellness",
+          'spec.c6Desc': 'Gentle, compassionate homeopathy tailored for childhood immunity, recurring tonsils, PCOS, and hormonal transitions.',
+          'spec.viewApproach': 'View Approach',
+          'journey.eyebrow': 'Structured Care Pathway',
+          'journey.title': 'How Your Consultation Works',
+          'journey.subtitle': 'Every step is designed for clarity, comfort, and attentive follow-through from your very first visit.',
+          'journey.s1Title': 'Book Your Slot',
+          'journey.s1Desc': 'Choose a convenient morning or evening slot online or via WhatsApp so your consultation begins with minimal waiting.',
+          'journey.s2Title': 'Detailed Case-Taking',
+          'journey.s2Desc': 'Dr. Shinde listens carefully to your chief concerns, medical history, daily habits, and triggers to understand the full picture.',
+          'journey.s3Title': 'Personalized Remedy Plan',
+          'journey.s3Desc': 'Receive an individualized constitutional prescription along with practical dietary, sleep, and lifestyle pointers.',
+          'journey.s4Title': 'Guided Follow-Up',
+          'journey.s4Desc': 'Periodic progress reviews allow careful potency adjustments as your symptoms settle and vitality steadies.',
+          'doctor.eyebrow': 'Lead Practitioner',
+          'doctor.role': 'Homeopathic Practitioner • Gajanan Clinic, Satara',
+          'doctor.locTag': 'Satara, Maharashtra',
+          'doctor.credPlaceholder': 'Qualifications & Registration No. — Ready to Update',
+          'doctor.quote': '“True healing begins when a patient feels genuinely heard. In homeopathy, every detail of a person’s health story guides us toward gentle, lasting restoration.”',
+          'doctor.bio': 'At Gajanan Clinic in Satara, Dr. Nandkishor Arun Shinde combines classical homeopathic principles with a calm, structured modern consultation experience. Each patient receives attentive case-taking, transparent communication, and follow-up support tailored to long-term wellbeing.',
+          'doctor.p1Title': 'Individualized Prescribing',
+          'doctor.p1Desc': 'Remedies matched to the person, not a one-size template.',
+          'doctor.p2Title': 'Clear Patient Guidance',
+          'doctor.p2Desc': 'Honest timelines, dosage clarity, and realistic expectations.',
+          'doctor.p3Title': 'Respectful Privacy',
+          'doctor.p3Desc': 'Confidential, unhurried one-on-one consultations.',
+          'doctor.p4Title': 'Marathi & English Care',
+          'doctor.p4Desc': 'Comfortable communication in your preferred language.',
+          'book.eyebrow': 'Schedule a Visit',
+          'book.title': 'Reserve Your Consultation',
+          'book.subtitle': 'Pick a morning or evening slot below. After submitting, you’ll receive an instant booking summary with a one-tap WhatsApp confirmation link.',
+          'book.prepTitle': 'Helpful for Your First Visit',
+          'book.prep1': 'Carry recent lab reports or prescriptions if you have any.',
+          'book.prep2': 'Plan 25–40 minutes for an unhurried first constitutional case-taking.',
+          'book.prep3': 'No payment is required online; confirm directly at the clinic desk.',
+          'book.visitType': '1. Select Visit Type',
+          'book.firstVisit': 'First Consultation',
+          'book.followUp': 'Follow-Up Visit',
+          'book.focusLabel': '2. Focus Area',
+          'book.dateLabel': '3. Preferred Date',
+          'book.slotLabel': '4. Choose Preferred Time Slot',
+          'book.nameLabel': 'Patient Full Name *',
+          'book.phoneLabel': 'Mobile Number *',
+          'book.noteLabel': 'Brief Health Note (Optional)',
+          'book.submitBtn': 'Generate Appointment Request',
+          'book.confEyebrow': 'Request Prepared',
+          'book.confTitle': 'Appointment Summary Ready',
+          'book.confSub': 'Tap “Confirm via WhatsApp” below to send your slot details directly to Gajanan Clinic.',
+          'book.waBtn': 'Confirm via WhatsApp',
+          'faq.eyebrow': 'Patient Guidance',
+          'faq.title': 'Frequently Asked Questions',
+          'faq.subtitle': 'Clear answers to help you feel confident and prepared before visiting Gajanan Clinic in Satara.',
+          'faq.q1': 'How does a homeopathic consultation differ from a regular clinic visit?',
+          'faq.a1': 'Constitutional homeopathy looks beyond isolated symptoms. Dr. Shinde explores when your discomfort started, what improves or aggravates it, your sleep quality, digestion, stress levels, and family tendencies—allowing a tailored remedy selection focused on root-cause balance.',
+          'faq.q2': 'Are homeopathic remedies safe for children and senior citizens?',
+          'faq.a2': 'Yes. When prescribed by a qualified practitioner after proper evaluation, homeopathic remedies are gentle, non-habit-forming, and easy for children and elders to take. If you are already taking essential conventional medicines, please inform Dr. Shinde during your consultation—never stop ongoing prescriptions abruptly without medical guidance.',
+          'faq.q3': 'What should I bring to my first visit at Gajanan Clinic?',
+          'faq.a3': 'Please bring any recent blood tests, imaging reports, or a list of current medications and supplements. For skin concerns, noting when flare-ups occur is also helpful. No fasting is required before your consultation.',
+          'faq.q4': 'How long does an initial consultation take?',
+          'faq.a4': 'A first consultation for chronic concerns typically takes 25 to 40 minutes so your case can be documented thoroughly. Follow-up reviews are shorter—usually 10 to 15 minutes—to track improvement and refine your remedy schedule.',
+          'faq.q5': 'Do I need a prior appointment to visit in Satara?',
+          'faq.a5': 'Booking a slot ahead of time is strongly recommended—especially for first-time chronic consultations—so we can dedicate focused time to your case without keeping you waiting at reception.',
+          'contact.eyebrow': 'Visit the Clinic',
+          'contact.title': 'Gajanan Clinic, Satara',
+          'contact.addrLabel': 'Clinic Address',
+          'contact.timeEyebrow': 'Weekly Schedule',
+          'contact.timeTitle': 'Clinic Timings',
+          'contact.daysMonSat': 'Monday – Saturday',
+          'contact.daySun': 'Sunday',
+          'contact.sunStatus': 'By Prior Appointment',
+          'contact.practitioner': 'Practitioner',
+          'contact.languages': 'Languages',
+          'footer.top': 'Back to top'
+        },
+        mr: {
+          'brand.name': 'गजानन क्लिनिक',
+          'brand.subtitle': 'सातारा • होमिओपॅथी उपचार',
+          'nav.difference': 'आमची वैशिष्ट्ये',
+          'nav.specialties': 'उपचार विभाग',
+          'nav.process': 'उपचार पद्धत',
+          'nav.doctor': 'डॉ. शिंदे',
+          'nav.faq': 'नेहमीचे प्रश्न',
+          'nav.contact': 'संपर्क',
+          'nav.cta': 'अपॉइंटमेंट घ्या',
+          'hero.badge': 'सातारा, महाराष्ट्र • होमिओपॅथिक उपचार',
+          'hero.titleLine1': 'संवेदनशील होमिओपॅथी,',
+          'hero.titleLine2': 'मुळापासून आरोग्यदायी उपचारांचा विश्वास.',
+          'hero.subtitle': 'डॉ. नंदकिशोर अरुण शिंदे यांच्या मार्गदर्शनाखाली गजानन क्लिनिकमध्ये प्रत्येक रुग्णाच्या प्रकृतीनुसार सुरक्षित, सौम्य आणि मुळापासून आराम देणारे होमिओपॅथिक उपचार केले जातात.',
+          'hero.primaryCta': 'अपॉइंटमेंट बुक करा',
+          'hero.secondaryCta': 'उपचार विभाग पहा',
+          'hero.trust1': 'सखोल प्रकृती परीक्षण',
+          'hero.trust2': 'सुरक्षित व सवय न लागणारी औषधे',
+          'hero.trust3': 'सर्व वयोगटांसाठी उपयुक्त',
+          'infoCard.eyebrow': 'क्लिनिक माहिती • सातारा',
+          'infoCard.title': 'डॉ. नंदकिशोर अरुण शिंदे',
+          'infoCard.role': 'होमिओपॅथिक चिकित्सक',
+          'infoCard.hoursLabel': 'क्लिनिकची वेळ',
+          'infoCard.editableTag': 'डेमो वेळ (बदलण्यायोग्य)',
+          'infoCard.morning': 'सकाळचे सत्र',
+          'infoCard.evening': 'सायंकाळचे सत्र',
+          'infoCard.monSat': 'सोमवार – शनिवार',
+          'infoCard.sunNote': 'रविवार: पूर्वनियोजित वेळ',
+          'infoCard.mode1': 'क्लिनिक तपासणी • सातारा',
+          'infoCard.mode2': 'आगाऊ वेळ प्राधान्य',
+          'infoCard.quickBook': 'सकाळ किंवा सायंकाळची वेळ आरक्षित करा',
+          'bento.eyebrow': 'उपचार तत्वज्ञान',
+          'bento.title': 'गजानन क्लिनिकची वैशिष्ट्ये',
+          'bento.subtitle': 'शांत वातावरण, सखोल ऐकून घेणे आणि शास्त्रीय होमिओपॅथी यांचा सुवर्णसंगम — जेणेकरून प्रत्येक रुग्णाला विश्वासार्ह व वैयक्तिक उपचार मिळतील.',
+          'bento.tag1': 'मूळ तत्व',
+          'bento.c1Title': 'मुळापासून प्रकृतीनुसार होमिओपॅथी',
+          'bento.c1Desc': 'फक्त लक्षणे तात्पुरती दडपण्याऐवजी तुमची शारीरिक प्रकृती, झोप, आहार आणि आजाराचे मूळ कारण समजून घेऊन दीर्घकालीन संतुलन साधणारे सौम्य उपचार केले जातात.',
+          'bento.c2Title': 'सखोल व निवांत केस-टेकिंग',
+          'bento.c2Desc': 'प्रत्येक रुग्णाची संपूर्ण आरोग्य माहिती, जुने रिपोर्ट्स आणि जीवनशैली शांतपणे समजून घेऊनच वैयक्तिक उपचार आराखडा तयार केला जातो.',
+          'bento.c3Title': 'सर्व पिढ्यांसाठी सुरक्षित',
+          'bento.c3Desc': 'लहान मुले, तरुण आणि ज्येष्ठ नागरिक यांच्यासाठी सुरक्षित, सौम्य आणि घेण्यास सोपी होमिओपॅथिक औषधे.',
+          'bento.c4Title': 'आधुनिक व सुलभ रुग्ण अनुभव',
+          'bento.c4Desc': 'वेळेनुसार अपॉइंटमेंट व्यवस्था, स्पष्ट औषध मार्गदर्शन आणि व्हॉट्सॲपद्वारे सोपी नोंदणी सुविधा.',
+          'bento.c5Title': 'साताऱ्यात विश्वासार्ह सेवा',
+          'bento.c5Desc': 'सातारा शहरात स्वच्छ, शांत आणि आश्वासक क्लिनिक वातावरण — तुमच्या कुटुंबाच्या आरोग्यासाठी सदैव तत्पर.',
+          'spec.eyebrow': 'उपचार क्षेत्रे',
+          'spec.title': 'प्रमुख उपचार विभाग',
+          'spec.subtitle': 'तुमच्या तक्रारीनुसार विभाग निवडा आणि आमची होमिओपॅथिक उपचार पद्धत जाणून घ्या.',
+          'spec.fAll': 'सर्व',
+          'spec.fSkin': 'त्वचा व केस',
+          'spec.fResp': 'श्वसन व ॲलर्जी',
+          'spec.fDig': 'पचन व प्रतिकारशक्ती',
+          'spec.fJoint': 'सांधेदुखी व जीवनशैली',
+          'spec.fFamily': 'बाल व महिला आरोग्य',
+          'spec.catSkin': 'त्वचारोग',
+          'spec.catResp': 'श्वसन संतुलन',
+          'spec.catDig': 'पचन आरोग्य',
+          'spec.catJoint': 'हालचाल सुलभता',
+          'spec.catLife': 'मानसिक व झोप आरोग्य',
+          'spec.catFamily': 'कौटुंबिक आरोग्य',
+          'spec.c1Title': 'त्वचा व केस विकार',
+          'spec.c1Desc': 'जुनाट त्वचा विकार, वारंवार येणारी खाज, मुरूमे व केस गळती यांवर अंतर्गत प्रकृतीनुसार सुरक्षित उपचार.',
+          'spec.c2Title': 'श्वसन व ॲलर्जी विकार',
+          'spec.c2Desc': 'बदलत्या हवामानातील ॲलर्जी, सायनस, सर्दी व दम्यासारख्या तक्रारींवर सौम्य व प्रभावी उपाय.',
+          'spec.c3Title': 'पचन व रोगप्रतिकारशक्ती',
+          'spec.c3Desc': 'पित्त, गॅसेस, अपचन, IBS आणि वारंवार होणारे संसर्ग कमी करून नैसर्गिक प्रतिकारशक्ती वाढवण्यासाठी उपचार.',
+          'spec.c4Title': 'सांधेदुखी व कंबरदुखी',
+          'spec.c4Desc': 'गुडघेदुखी, संधिवात, मान व कंबरेची जखडण कमी करून दैनंदिन हालचाल सुखकर करणारे उपचार.',
+          'spec.c5Title': 'मायग्रेन, झोप व ताणतणाव',
+          'spec.c5Desc': 'अर्धशिशी, अपुरी झोप, मानसिक थकवा आणि जीवनशैलीजन्य तक्रारींवर संतुलित होमिओपॅथिक मार्गदर्शन.',
+          'spec.c6Title': 'बाल व महिला आरोग्य',
+          'spec.c6Desc': 'लहान मुलांची प्रतिकारशक्ती, टॉन्सिल्स तसेच महिलांच्या हार्मोनल व PCOS तक्रारींवर सौम्य उपचार.',
+          'spec.viewApproach': 'उपचार पद्धत पहा',
+          'journey.eyebrow': 'उपचाराची सुसूत्र प्रक्रिया',
+          'journey.title': 'तुमची तपासणी कशी होते?',
+          'journey.subtitle': 'पहिल्या भेटीपासून ते नियमित फॉलो-अपपर्यंत प्रत्येक टप्पा स्पष्ट आणि रुग्णस्नेही आहे.',
+          'journey.s1Title': 'वेळ आरक्षित करा',
+          'journey.s1Desc': 'ऑनलाइन किंवा व्हॉट्सॲपद्वारे सकाळ किंवा सायंकाळची सोयीची वेळ निवडा.',
+          'journey.s2Title': 'सखोल केस-टेकिंग',
+          'journey.s2Desc': 'डॉ. शिंदे तुमच्या तक्रारी, वैद्यकीय इतिहास आणि सवयी शांतपणे समजून घेतात.',
+          'journey.s3Title': 'वैयक्तिक उपचार योजना',
+          'journey.s3Desc': 'तुमच्या प्रकृतीनुसार औषधे तसेच आहार व दिनचर्येबाबत उपयुक्त सूचना दिल्या जातात.',
+          'journey.s4Title': 'नियमित फॉलो-अप',
+          'journey.s4Desc': 'आरोग्यातील सुधारणेनुसार वेळोवेळी तपासणी करून औषधांची योग्य मात्रा निश्चित केली जाते.',
+          'doctor.eyebrow': 'मुख्य चिकित्सक',
+          'doctor.role': 'होमिओपॅथिक चिकित्सक • गजानन क्लिनिक, सातारा',
+          'doctor.locTag': 'सातारा, महाराष्ट्र',
+          'doctor.credPlaceholder': 'शैक्षणिक पात्रता व नोंदणी क्रमांक — अद्ययावत करण्यासाठी तयार',
+          'doctor.quote': '“रुग्णाचे म्हणणे मनापासून ऐकून घेणे हीच खऱ्या उपचाराची पहिली पायरी आहे. होमिओपॅथीमध्ये प्रत्येक लहान तपशील आपल्याला सौम्य व शाश्वत आरोग्याकडे नेतो.”',
+          'doctor.bio': 'साताऱ्यातील गजानन क्लिनिकमध्ये डॉ. नंदकिशोर अरुण शिंदे पारंपरिक होमिओपॅथिक शास्त्राची सांगड आधुनिक व सुसूत्र रुग्णसेवेशी घालतात. प्रत्येक रुग्णाला निवांत तपासणी, पारदर्शक संवाद आणि दीर्घकालीन आरोग्यासाठी मार्गदर्शन मिळते.',
+          'doctor.p1Title': 'व्यक्तिनिहाय औषध निवड',
+          'doctor.p1Desc': 'प्रत्येक रुग्णाच्या प्रकृतीनुसार स्वतंत्र उपचार योजना.',
+          'doctor.p2Title': 'स्पष्ट मार्गदर्शन',
+          'doctor.p2Desc': 'औषध घेण्याची योग्य पद्धत आणि वास्तववादी वेळापत्रक.',
+          'doctor.p3Title': 'गोपनीयता व सन्मान',
+          'doctor.p3Desc': 'खाजगी व निवांत वातावरणात वैयक्तिक समुपदेशन.',
+          'doctor.p4Title': 'मराठी व इंग्रजी संवाद',
+          'doctor.p4Desc': 'तुमच्या सोयीच्या भाषेत मोकळेपणाने संवाद.',
+          'book.eyebrow': 'भेटीची वेळ घ्या',
+          'book.title': 'अपॉइंटमेंट आरक्षित करा',
+          'book.subtitle': 'खालील फॉर्ममध्ये सोयीची तारीख व वेळ निवडा. नोंदणीनंतर लगेचच व्हॉट्सॲपद्वारे अपॉइंटमेंट निश्चित करता येते.',
+          'book.prepTitle': 'पहिल्या भेटीसाठी उपयुक्त सूचना',
+          'book.prep1': 'असल्यास अलीकडील तपासणी रिपोर्ट्स व औषधांची माहिती सोबत आणा.',
+          'book.prep2': 'पहिल्या सखोल तपासणीसाठी २५–४० मिनिटांचा वेळ राखून ठेवा.',
+          'book.prep3': 'ऑनलाइन पेमेंटची आवश्यकता नाही; क्लिनिकमध्ये थेट नोंदणी करा.',
+          'book.visitType': '१. भेटीचा प्रकार निवडा',
+          'book.firstVisit': 'पहिली तपासणी',
+          'book.followUp': 'फॉलो-अप भेट',
+          'book.focusLabel': '२. तक्रारीचा विभाग',
+          'book.dateLabel': '३. पसंतीची तारीख',
+          'book.slotLabel': '४. सोयीची वेळ निवडा',
+          'book.nameLabel': 'रुग्णाचे पूर्ण नाव *',
+          'book.phoneLabel': 'मोबाईल क्रमांक *',
+          'book.noteLabel': 'थोडक्यात माहिती (ऐच्छिक)',
+          'book.submitBtn': 'अपॉइंटमेंट तपशील तयार करा',
+          'book.confEyebrow': 'नोंदणी तयार आहे',
+          'book.confTitle': 'अपॉइंटमेंट सारांश तयार',
+          'book.confSub': 'तुमचा तपशील थेट गजानन क्लिनिकला पाठवण्यासाठी खालील व्हॉट्सॲप बटणावर क्लिक करा.',
+          'book.waBtn': 'व्हॉट्सॲपवर निश्चित करा',
+          'faq.eyebrow': 'रुग्णांसाठी माहिती',
+          'faq.title': 'नेहमी विचारले जाणारे प्रश्न',
+          'faq.subtitle': 'गजानन क्लिनिकला भेट देण्यापूर्वी तुमच्या मनातील शंकांची स्पष्ट उत्तरे.',
+          'faq.q1': 'होमिओपॅथिक तपासणी नेहमीच्या तपासणीपेक्षा कशी वेगळी असते?',
+          'faq.a1': 'होमिओपॅथीमध्ये केवळ आजाराचे लक्षण न पाहता त्याची सुरुवात, वाढवणारे घटक, झोप, पचन, तणाव आणि कौटुंबिक प्रकृती यांचा सखोल अभ्यास केला जातो, ज्यामुळे मूळ कारणावर उपचार करता येतात.',
+          'faq.q2': 'लहान मुले आणि ज्येष्ठ नागरिकांसाठी होमिओपॅथी सुरक्षित आहे का?',
+          'faq.a2': 'होय, तज्ज्ञ डॉक्टरांच्या मार्गदर्शनाखाली दिलेली होमिओपॅथिक औषधे सौम्य, सुरक्षित व सवय न लागणारी असतात. सुरू असलेली इतर आवश्यक औषधे डॉक्टरांना अवश्य दाखवावीत.',
+          'faq.q3': 'पहिल्या भेटीत सोबत काय आणावे?',
+          'faq.a3': 'अलीकडील रक्त तपासण्या, रिपोर्ट्स किंवा सध्या सुरू असलेल्या औषधांची यादी सोबत आणावी. तपासणीसाठी उपाशीपोटी येण्याची गरज नाही.',
+          'faq.q4': 'पहिल्या तपासणीसाठी किती वेळ लागतो?',
+          'faq.a4': 'जुनाट तक्रारींच्या पहिल्या सखोल केस-टेकिंगसाठी साधारण २५ ते ४० मिनिटे लागतात. फॉलो-अप तपासणीसाठी साधारण १० ते १५ मिनिटे पुरेशी असतात.',
+          'faq.q5': 'साताऱ्यात क्लिनिकला येण्यापूर्वी अपॉइंटमेंट घेणे आवश्यक आहे का?',
+          'faq.a5': 'आगाऊ वेळ आरक्षित केल्यास तुम्हाला प्रतीक्षा करावी लागत नाही आणि पहिल्या तपासणीसाठी पुरेसा वेळ देता येतो.',
+          'contact.eyebrow': 'क्लिनिक पत्ता',
+          'contact.title': 'गजानन क्लिनिक, सातारा',
+          'contact.addrLabel': 'पत्ता',
+          'contact.timeEyebrow': 'आठवड्याचे वेळापत्रक',
+          'contact.timeTitle': 'क्लिनिकची वेळ',
+          'contact.daysMonSat': 'सोमवार – शनिवार',
+          'contact.daySun': 'रविवार',
+          'contact.sunStatus': 'पूर्वनियोजित वेळनुसार',
+          'contact.practitioner': 'चिकित्सक',
+          'contact.languages': 'भाषा',
+          'footer.top': 'वर जा'
+        }
+      };
+
+      let currentLang = 'en';
+
+      function applyLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang;
+
+        const dict = i18n[lang] || i18n.en;
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          if (dict[key]) {
+            el.textContent = dict[key];
+          }
+        });
+
+        const enBtn = document.getElementById('lang-en');
+        const mrBtn = document.getElementById('lang-mr');
+        if (lang === 'en') {
+          enBtn.className = 'lang-btn px-2.5 sm:px-3 py-1.5 rounded-full transition-all duration-300 bg-emeraldDeep text-porcelain shadow-sm';
+          enBtn.setAttribute('aria-pressed', 'true');
+          mrBtn.className = 'lang-btn px-2.5 sm:px-3 py-1.5 rounded-full transition-all duration-300 text-mutedSlate hover:text-emeraldDeep';
+          mrBtn.setAttribute('aria-pressed', 'false');
+        } else {
+          mrBtn.className = 'lang-btn px-2.5 sm:px-3 py-1.5 rounded-full transition-all duration-300 bg-emeraldDeep text-porcelain shadow-sm';
+          mrBtn.setAttribute('aria-pressed', 'true');
+          enBtn.className = 'lang-btn px-2.5 sm:px-3 py-1.5 rounded-full transition-all duration-300 text-mutedSlate hover:text-emeraldDeep';
+          enBtn.setAttribute('aria-pressed', 'false');
+        }
+
+        updateLiveClinicStatus();
+      }
+
+      document.getElementById('lang-en').addEventListener('click', () => applyLanguage('en'));
+      document.getElementById('lang-mr').addEventListener('click', () => applyLanguage('mr'));
+
+      /* -----------------------------------------------------------------------
+         2. LIVE OPEN / CLOSED CLINIC STATUS (LOCAL TIME)
+         ----------------------------------------------------------------------- */
+      function updateLiveClinicStatus() {
+        const statusText = document.getElementById('live-status-text');
+        const statusDot = document.getElementById('live-status-dot');
+        const statusPill = document.getElementById('live-status-pill');
+        if (!statusText || !statusDot || !statusPill) return;
+
+        const now = new Date();
+        const day = now.getDay(); // 0 = Sun, 1..6 = Mon..Sat
+        const mins = now.getHours() * 60 + now.getMinutes();
+
+        // Demo hours: Mon-Sat 10:00-13:30 (600..810) and 17:30-20:30 (1050..1230)
+        const isMorningOpen = day >= 1 && day <= 6 && mins >= 600 && mins < 810;
+        const isEveningOpen = day >= 1 && day <= 6 && mins >= 1050 && mins < 1230;
+        const isOpen = isMorningOpen || isEveningOpen;
+
+        if (isOpen) {
+          statusText.textContent = currentLang === 'mr' ? 'सध्या सुरू आहे' : 'Open Now';
+          statusDot.className = 'status-pulse w-2 h-2 rounded-full bg-emerald-600 text-emerald-500';
+          statusPill.className = 'inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold shrink-0 bg-sageTint text-emeraldDeep border border-emeraldDeep/15';
+        } else {
+          statusText.textContent = currentLang === 'mr'
+            ? (day === 0 ? 'रविवार • अपॉइंटमेंट' : 'सध्या बंद आहे')
+            : (day === 0 ? 'Sun • By Appt' : 'Closed Now');
+          statusDot.className = 'w-2 h-2 rounded-full bg-champagne';
+          statusPill.className = 'inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold shrink-0 bg-linen text-mutedSlate border border-emeraldDeep/10';
+        }
+      }
+      updateLiveClinicStatus();
+      setInterval(updateLiveClinicStatus, 60000);
+
+      /* -----------------------------------------------------------------------
+         3. SCROLL-AWARE NAVBAR & BACK TO TOP
+         ----------------------------------------------------------------------- */
+      const header = document.getElementById('site-header');
+      function handleScroll() {
+        if (window.scrollY > 24) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+
+      document.getElementById('back-to-top').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      /* -----------------------------------------------------------------------
+         4. MOBILE DRAWER NAVIGATION
+         ----------------------------------------------------------------------- */
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      const mobileDrawerClose = document.getElementById('mobile-drawer-close');
+
+      function openMobileDrawer() {
+        mobileDrawer.classList.add('open');
+        mobileDrawer.setAttribute('aria-hidden', 'false');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMobileDrawer() {
+        mobileDrawer.classList.remove('open');
+        mobileDrawer.setAttribute('aria-hidden', 'true');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      mobileMenuBtn.addEventListener('click', openMobileDrawer);
+      mobileDrawerClose.addEventListener('click', closeMobileDrawer);
+      mobileDrawer.addEventListener('click', (e) => {
+        if (e.target === mobileDrawer) closeMobileDrawer();
+      });
+      document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+        link.addEventListener('click', closeMobileDrawer);
+      });
+
+      /* -----------------------------------------------------------------------
+         5. BENTO GRID MOUSE-TRACKING RADIAL SPOTLIGHT (--x, --y)
+         ----------------------------------------------------------------------- */
+      const bentoCards = document.querySelectorAll('.bento-card');
+      bentoCards.forEach((card) => {
+        card.addEventListener('pointermove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          card.style.setProperty('--x', `${x}px`);
+          card.style.setProperty('--y', `${y}px`);
+        });
+      });
+
+      /* -----------------------------------------------------------------------
+         6. SPECIALTIES FILTERING & SLIDE-OVER DETAIL MODAL
+         ----------------------------------------------------------------------- */
+      const treatmentDetails = {
+        skin: {
+          category: 'Dermatology & Trichology',
+          title: 'Skin & Hair Care',
+          focusValue: 'Skin & Hair Care',
+          overview: 'In homeopathy, chronic skin flare-ups and hair fall are understood as outward reflections of internal imbalance. Constitutional prescribing gently supports healthy skin turnover and scalp vitality from within, aiming to reduce recurrence rather than suppressing eruptions with harsh external creams.',
+          conditions: ['Eczema & Dermatitis', 'Psoriasis Support', 'Recurring Acne', 'Urticaria (Hives)', 'Fungal Sensitivity', 'Hair Thinning & Alopecia Areata'],
+          pillars: [
+            'Timeline of flare-ups, seasonal shifts, and dietary sensitivities',
+            'Previous topical treatments and rebound patterns',
+            'Stress, sleep rhythm, and hormonal influences affecting skin & hair'
+          ]
+        },
+        respiratory: {
+          category: 'Airway & Allergy Balance',
+          title: 'Respiratory & Allergies',
+          focusValue: 'Respiratory & Allergies',
+          overview: 'Homeopathic care focuses on calming hypersensitivity to dust, pollen, cold air, and weather transitions. Over structured follow-ups, the goal is to reduce the frequency and intensity of allergic episodes and build steadier respiratory comfort.',
+          conditions: ['Allergic Rhinitis', 'Chronic Sinusitis', 'Nasal Polyps Support', 'Seasonal Sneezing', 'Recurring Bronchitis', 'Childhood & Adult Asthma Support'],
+          pillars: [
+            'Specific environmental, weather, and time-of-day triggers',
+            'Frequency of acute episodes and recovery duration',
+            'Family tendency toward respiratory or skin allergies'
+          ]
+        },
+        digestive: {
+          category: 'Gut Rhythm & Immunity',
+          title: 'Digestive & Immunity',
+          focusValue: 'Digestive & Immunity',
+          overview: 'Digestive comfort is closely intertwined with stress, meal timing, and constitutional constitution. Homeopathy addresses acid reflux, bowel irregularity, and lowered resistance holistically while offering realistic dietary refinements.',
+          conditions: ['Chronic Acidity & GERD', 'Gastritis & Bloating', 'Irritable Bowel Syndrome (IBS)', 'Constipation & Piles Support', 'Recurrent Throat/Cold Episodes'],
+          pillars: [
+            'Appetite patterns, food intolerances, and post-meal discomfort',
+            'Connection between mental stress and digestive flare-ups',
+            'Overall energy, hydration, and immunity recovery patterns'
+          ]
+        },
+        joints: {
+          category: 'Musculoskeletal Comfort',
+          title: 'Joint & Pain Relief',
+          focusValue: 'Joint & Pain Relief',
+          overview: 'Constitutional remedies help ease inflammatory discomfort, morning stiffness, and nerve-related aches gently—supporting long-term mobility alongside posture and movement awareness.',
+          conditions: ['Osteoarthritis & Knee Pain', 'Rheumatoid Support', 'Cervical & Lumbar Spondylosis', 'Sciatica', 'Frozen Shoulder', 'Gout & Heel Pain'],
+          pillars: [
+            'Nature of pain (stiffness on waking vs. pain after exertion)',
+            'Impact of cold, damp weather, warmth, and rest',
+            'Existing orthopedic reports and daily mobility demands'
+          ]
+        },
+        lifestyle: {
+          category: 'Neurological & Metabolic Rhythm',
+          title: 'Migraine, Sleep & Lifestyle',
+          focusValue: 'Migraine, Sleep & Lifestyle',
+          overview: 'Modern schedules often trigger recurring migraines, restless sleep, and burnout. Individualized homeopathy addresses both physical triggers and nervous-system overload gently without daytime grogginess.',
+          conditions: ['Migraine & Tension Headaches', 'Insomnia & Disturbed Sleep', 'Stress Fatigue & Anxiety Support', 'Thyroid Wellness Support', 'Vertigo'],
+          pillars: [
+            'Headache aura, light/sound sensitivity, and emotional triggers',
+            'Sleep architecture, waking hours, and energy dips',
+            'Work-life pace and recent metabolic blood panels'
+          ]
+        },
+        family: {
+          category: 'Pediatrics & Women’s Care',
+          title: "Child & Women's Wellness",
+          focusValue: "Child & Women's Wellness",
+          overview: 'Because homeopathic doses are gentle and palatable, families often choose them for childhood immunity as well as nuanced hormonal transitions across every stage of womanhood.',
+          conditions: ['Recurrent Childhood Colds', 'Tonsillitis & Adenoids', 'Low Appetite & Growth Support', 'PCOS & Cycle Irregularity', 'Menstrual Discomfort', 'Perimenopausal Balance'],
+          pillars: [
+            'Child’s temperament, sleep, milestones, and seasonal pattern',
+            'Detailed menstrual and hormonal history with relevant scans',
+            'Gentle, stage-appropriate dosage and attentive follow-up'
+          ]
+        }
+      };
+
+      const filterBtns = document.querySelectorAll('.filter-pill');
+      const specialtyCards = document.querySelectorAll('.specialty-card');
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          filterBtns.forEach((b) => {
+            const isActive = b === btn;
+            b.classList.toggle('active', isActive);
+            b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          });
+
+          specialtyCards.forEach((card) => {
+            const cat = card.getAttribute('data-category');
+            const shouldShow = filter === 'all' || cat === filter;
+            if (shouldShow) {
+              card.classList.remove('is-hidden', 'is-entering');
+              void card.offsetWidth; // trigger smooth entrance animation
+              card.classList.add('is-entering');
+            } else {
+              card.classList.add('is-hidden');
+              card.classList.remove('is-entering');
+            }
+          });
+        });
+      });
+
+      // Slide-over Drawer Logic
+      const approachDrawer = document.getElementById('approach-drawer');
+      const drawerCloseBtn = document.getElementById('approach-drawer-close');
+      const drawerCloseSecondary = document.getElementById('drawer-close-secondary');
+      const drawerConsultBtn = document.getElementById('drawer-consult-btn');
+      let activeFocusForBooking = 'General Homeopathic Consultation';
+
+      function openApproachDrawer(id) {
+        const data = treatmentDetails[id];
+        if (!data) return;
+
+        activeFocusForBooking = data.focusValue;
+        document.getElementById('drawer-category').textContent = data.category;
+        document.getElementById('drawer-title').textContent = data.title;
+        document.getElementById('drawer-overview').textContent = data.overview;
+
+        // Safely populate conditions via DOM nodes (zero innerHTML)
+        const condContainer = document.getElementById('drawer-conditions');
+        condContainer.textContent = '';
+        data.conditions.forEach((cond) => {
+          const span = document.createElement('span');
+          span.className = 'px-3 py-1.5 rounded-full bg-sageTint/80 text-emeraldDeep text-xs font-medium';
+          span.textContent = cond;
+          condContainer.appendChild(span);
+        });
+
+        // Safely populate evaluation pillars
+        const pillarsList = document.getElementById('drawer-pillars');
+        pillarsList.textContent = '';
+        data.pillars.forEach((pillar) => {
+          const li = document.createElement('li');
+          li.className = 'flex items-start gap-2.5';
+
+          const dot = document.createElement('span');
+          dot.className = 'w-1.5 h-1.5 rounded-full bg-champagne mt-2 shrink-0';
+
+          const txt = document.createElement('span');
+          txt.textContent = pillar;
+
+          li.appendChild(dot);
+          li.appendChild(txt);
+          pillarsList.appendChild(li);
+        });
+
+        approachDrawer.classList.add('open');
+        approachDrawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        drawerCloseBtn.focus();
+      }
+
+      function closeApproachDrawer() {
+        approachDrawer.classList.remove('open');
+        approachDrawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('.open-approach-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          openApproachDrawer(btn.getAttribute('data-treatment-id'));
+        });
+      });
+
+      drawerCloseBtn.addEventListener('click', closeApproachDrawer);
+      drawerCloseSecondary.addEventListener('click', closeApproachDrawer);
+      approachDrawer.addEventListener('click', (e) => {
+        if (e.target === approachDrawer) closeApproachDrawer();
+      });
+
+      // "Consult for This" CTA pre-selects category in booking form
+      drawerConsultBtn.addEventListener('click', () => {
+        const focusSelect = document.getElementById('booking-focus');
+        if (focusSelect) {
+          focusSelect.value = activeFocusForBooking;
+        }
+        closeApproachDrawer();
+        // Ensure form view is visible if previously submitted
+        document.getElementById('booking-confirmation').classList.add('hidden');
+        document.getElementById('booking-form').classList.remove('hidden');
+
+        const bookingSec = document.getElementById('booking');
+        bookingSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        showToast(`Selected focus: ${activeFocusForBooking}`);
+      });
+
+      /* -----------------------------------------------------------------------
+         7. PURE CSS GRID FAQ ACCORDION
+         ----------------------------------------------------------------------- */
+      const accordionItems = document.querySelectorAll('.accordion-item');
+      accordionItems.forEach((item) => {
+        const trigger = item.querySelector('.accordion-trigger');
+        trigger.addEventListener('click', () => {
+          const isOpen = item.getAttribute('data-open') === 'true';
+          // Close siblings for clean editorial rhythm
+          accordionItems.forEach((other) => {
+            other.setAttribute('data-open', 'false');
+            other.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            item.setAttribute('data-open', 'true');
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      /* -----------------------------------------------------------------------
+         8. INTERACTIVE STATIC BOOKING FORM (STRICT VALIDATION + ZERO XSS)
+         ----------------------------------------------------------------------- */
+      const bookingForm = document.getElementById('booking-form');
+      const bookingConfirmation = document.getElementById('booking-confirmation');
+      const dateInput = document.getElementById('booking-date');
+
+      // Set min date & default date to today (local timezone)
+      const todayObj = new Date();
+      const yyyy = todayObj.getFullYear();
+      const mm = String(todayObj.getMonth() + 1).padStart(2, '0');
+      const dd = String(todayObj.getDate()).padStart(2, '0');
+      const todayISO = `${yyyy}-${mm}-${dd}`;
+      dateInput.min = todayISO;
+      dateInput.value = todayISO;
+
+      let selectedVisitType = 'First Consultation';
+      let selectedTimeSlot = '10:00 AM (Morning)';
+      let latestPlainSummary = '';
+
+      // Visit Type segmented control
+      const visitTabs = document.querySelectorAll('.visit-tab');
+      visitTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          selectedVisitType = tab.getAttribute('data-visit');
+          visitTabs.forEach((t) => {
+            const active = t === tab;
+            t.classList.toggle('selected', active);
+            t.classList.toggle('text-mutedSlate', !active);
+            t.setAttribute('aria-checked', active ? 'true' : 'false');
+          });
+        });
+      });
+
+      // Slot pills
+      const slotPills = document.querySelectorAll('.slot-pill');
+      slotPills.forEach((pill) => {
+        pill.addEventListener('click', () => {
+          selectedTimeSlot = pill.getAttribute('data-slot');
+          slotPills.forEach((p) => p.classList.toggle('selected', p === pill));
+        });
+      });
+
+      function setFieldError(id, message) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (message) {
+          el.textContent = message;
+          el.classList.remove('hidden');
+        } else {
+          el.textContent = '';
+          el.classList.add('hidden');
+        }
+      }
+
+      function sanitizePlainText(str) {
+        return String(str || '').replace(/[\u0000-\u001F\u007F<>]/g, '').trim();
+      }
+
+      function formatReadableDate(isoStr) {
+        try {
+          const parts = isoStr.split('-').map(Number);
+          const d = new Date(parts[0], parts[1] - 1, parts[2]);
+          return d.toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+        } catch (err) {
+          return isoStr;
+        }
+      }
+
+      bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const rawName = sanitizePlainText(document.getElementById('patient-name').value);
+        const rawPhone = sanitizePlainText(document.getElementById('patient-phone').value);
+        const digitsOnlyPhone = rawPhone.replace(/\D/g, '');
+        const rawDate = dateInput.value;
+        const focusArea = document.getElementById('booking-focus').value;
+        const rawNote = sanitizePlainText(document.getElementById('patient-note').value);
+
+        let isValid = true;
+
+        // Validate Name
+        if (rawName.length < 2) {
+          setFieldError('err-name', 'Please enter the patient’s full name (at least 2 characters).');
+          isValid = false;
+        } else {
+          setFieldError('err-name', '');
+        }
+
+        // Validate Phone (10-digit Indian mobile or +91 prefixed)
+        const normalizedPhone = digitsOnlyPhone.length === 12 && digitsOnlyPhone.startsWith('91')
+          ? digitsOnlyPhone.slice(2)
+          : digitsOnlyPhone;
+
+        if (!/^[6-9]\d{9}$/.test(normalizedPhone)) {
+          setFieldError('err-phone', 'Please enter a valid 10-digit Indian mobile number.');
+          isValid = false;
+        } else {
+          setFieldError('err-phone', '');
+        }
+
+        // Validate Date
+        if (!rawDate || rawDate < todayISO) {
+          setFieldError('err-date', 'Please choose today or an upcoming date.');
+          isValid = false;
+        } else {
+          setFieldError('err-date', '');
+        }
+
+        if (!isValid) {
+          showToast('Please check the highlighted fields.');
+          return;
+        }
+
+        // Generate clean demo reference ID
+        const refId = `GC-${String(Math.floor(1000 + Math.random() * 9000))}`;
+        const formattedDate = formatReadableDate(rawDate);
+        const formattedPhone = `+91 ${normalizedPhone.slice(0, 5)} ${normalizedPhone.slice(5)}`;
+
+        // Populate Confirmation Card STRICTLY via textContent (zero innerHTML)
+        document.getElementById('conf-ref').textContent = refId;
+        document.getElementById('conf-visit').textContent = selectedVisitType;
+        document.getElementById('conf-name').textContent = rawName;
+        document.getElementById('conf-phone').textContent = formattedPhone;
+        document.getElementById('conf-focus').textContent = focusArea;
+        document.getElementById('conf-datetime').textContent = `${formattedDate} • ${selectedTimeSlot}`;
+
+        const noteWrap = document.getElementById('conf-note-wrap');
+        if (rawNote) {
+          document.getElementById('conf-note').textContent = rawNote;
+          noteWrap.classList.remove('hidden');
+        } else {
+          document.getElementById('conf-note').textContent = '';
+          noteWrap.classList.add('hidden');
+        }
+
+        // Prepare clean WhatsApp message (Demo placeholder number clearly indicated)
+        const messageLines = [
+          'Namaskar Gajanan Clinic (Satara),',
+          'I would like to confirm an appointment with Dr. Nandkishor Arun Shinde:',
+          `• Ref ID: ${refId}`,
+          `• Visit Type: ${selectedVisitType}`,
+          `• Patient Name: ${rawName}`,
+          `• Mobile: ${formattedPhone}`,
+          `• Focus Area: ${focusArea}`,
+          `• Preferred Slot: ${formattedDate} at ${selectedTimeSlot}`
+        ];
+        if (rawNote) {
+          messageLines.push(`• Note: ${rawNote}`);
+        }
+        latestPlainSummary = messageLines.join('\n');
+
+        const demoWhatsAppNumber = '919000000000';
+        const waUrl = `https://wa.me/${demoWhatsAppNumber}?text=${encodeURIComponent(latestPlainSummary)}`;
+        document.getElementById('whatsapp-confirm-link').setAttribute('href', waUrl);
+
+        bookingForm.classList.add('hidden');
+        bookingConfirmation.classList.remove('hidden');
+        showToast('Appointment summary prepared');
+      });
+
+      document.getElementById('reset-booking-btn').addEventListener('click', () => {
+        bookingConfirmation.classList.add('hidden');
+        bookingForm.classList.remove('hidden');
+      });
+
+      /* -----------------------------------------------------------------------
+         9. SAFE CLIPBOARD COPY (iFrame-Compatible execCommand Fallback) + TOAST
+         ----------------------------------------------------------------------- */
+      let toastTimer = null;
+      function showToast(msg) {
+        const bar = document.getElementById('toast-bar');
+        const txt = document.getElementById('toast-message');
+        if (!bar || !txt) return;
+        txt.textContent = msg;
+        bar.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          bar.classList.remove('show');
+        }, 2800);
+      }
+
+      function safeCopyToClipboard(text, successMsg) {
+        try {
+          const textarea = document.createElement('textarea');
+          textarea.value = text;
+          textarea.setAttribute('readonly', '');
+          textarea.style.position = 'fixed';
+          textarea.style.top = '-9999px';
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          showToast(successMsg);
+        } catch (err) {
+          showToast('Unable to copy automatically');
+        }
+      }
+
+      document.getElementById('copy-summary-btn').addEventListener('click', () => {
+        if (latestPlainSummary) {
+          safeCopyToClipboard(latestPlainSummary, 'Appointment summary copied');
+        }
+      });
+
+      document.getElementById('copy-address-btn').addEventListener('click', () => {
+        const addr = document.getElementById('clinic-address-text').textContent.trim();
+        safeCopyToClipboard(addr, 'Clinic address copied');
+      });
+
+      /* -----------------------------------------------------------------------
+         10. INTERSECTION OBSERVER SCROLL REVEALS
+         ----------------------------------------------------------------------- */
+      const revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+        );
+        revealEls.forEach((el) => observer.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add('visible'));
+      }
+
+      /* -----------------------------------------------------------------------
+         11. KEYBOARD ACCESSIBILITY (ESCAPE TO CLOSE DRAWERS) & YEAR
+         ----------------------------------------------------------------------- */
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (approachDrawer.classList.contains('open')) closeApproachDrawer();
+          if (mobileDrawer.classList.contains('open')) closeMobileDrawer();
+        }
+      });
+
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) {
+        yearEl.textContent = String(new Date().getFullYear());
+      }
+    })();
+  </script>
+</body>
+</html>
